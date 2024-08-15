@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title> COL 331: Operating Systems</title>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Operating Systems<br>
+      </h1>
+      <h3> <font color="blue">Course: COL331, and COL633<br>
+          Semester II, 2017-18 <br>
+          Credits: 5 (3-0-4) <br>
+        </font></h3>
+    </div>
+    <br>
+    <b><font <br="" color="maroon"> <br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> <font
+            color="#000099">Prof. Smruti R. Sarangi </font></a> <br>
+        <br>
+        Lectures</font></b>: Tuesday, Wednesday and Friday: 10 AM to 11
+    AM, LHC 416<br>
+    <br>
+    <b><font <br="" color="maroon"> Course Load: </font></b>Minor 1,
+    Minor 2, End term, 3 programming assignments<br>
+    <font color="#990000"><b>Office Hours</b></font>: Friday 3 to 5 PM,
+    (SIT 215)<br>
+    <br>
+    <b><font <br="" color="maroon">Evaluation:</font></b> 15% (Minor 1),
+    15% (Minor 2), 25% (Major), Assignments (12.5% + 12.5% + 20%)<br>
+    <font color="#993300"><b>Passing Criteria</b>:</font> At least 30%
+    in assignments AND at least 30% in theory<br>
+    <br>
+    <b><font color="#660000">Policy for late assignments and re-minor: </font></b><br>
+    1. We will hold one re-minor for people who have missed one minor at
+    the end of the major exam. Note that<br>
+    to ensure a level playing field, it will be significantly harder
+    than the original minor exams. The student needs<br>
+    to show documentary evidence such as a medical certificate to the TA
+    on the day of the reminor. Please don't<br>
+    send any mails to the instructor or the TAs regarding this.<br>
+    <br>
+    2. Every homework will have a 3-day buffer period. (-15%) penalty
+    per day.<br>
+    <br>
+    <br>
+    <b><font color="maroon">Teaching Assistants</font></b><b><font
+        <br="" color="maroon">: </font></b><br>
+    <br>
+    <table border="0" cellpadding="0" cellspacing="0" width="772">
+      <tbody>
+        <tr style="height:17.0pt" height="23">
+          <td rowspan="1" class="xl77" style="border-bottom:2.0pt double
+            black; height:98.0pt;border-top:none" height="130">Shubhankar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Suman Singh<br>
+            Priyanka Singla<br>
+            Aditi Bhateja<br>
+            Sunaina Srivastava<br>
+            Sandeep Kumar<br>
+            Namrata Jain<br>
+            Diksha Moolchandani<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <b><font color="maroon">Reference Books</font></b><br>
+    <font color="#3333ff">[Textbook]</font>&nbsp; Operating Systems: A
+    Design Oriented Approach, McGrawHill, 2017<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="http://privateweb.iitd.ac.in/%7Esrsarangi/os/slides/">Link</a>
+    to slides. <br>
+    <br>
+    <b><font <br="" color="maroon"><br>
+      </font></b><b><font <br="" color="maroon">Lectures and Slides:<br>
+      </font></b><br>
+    <table border="1" width="1136">
+      <tbody>
+        <tr>
+          <td valign="top"><b>Date</b><br>
+          </td>
+          <td valign="top"><b>Lecture</b><br>
+          </td>
+          <td valign="top"><b>References</b><b>/Remarks<br>
+            </b> </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 2nd<br>
+          </td>
+          <td valign="top">Course policies<br>
+          </td>
+          <td valign="top"><a href="os-pres.pptx">Link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 4th </td>
+          <td valign="top">Basics of operating systems, and resource
+            management.<br>
+            Time and space multiplexing.<br>
+            Basic idea of virtual memory, and registers.</td>
+          <td valign="top">Chapter 1 </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 8th<br>
+          </td>
+          <td valign="top">Register usage convention, system calls,
+            interrupts, exceptions, disk controller.<br>
+          </td>
+          <td valign="top">Chapter 2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 9th<br>
+          </td>
+          <td valign="top">Life cycle of a system call<br>
+          </td>
+          <td valign="top">Chapter 3: system calls<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 11th<br>
+          </td>
+          <td valign="top">System calls to manipulate files, shell, and
+            terminal.<br>
+          </td>
+          <td valign="top">Difference between terminal and<br>
+            shell: (<a
+href="https://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line">link</a>)<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 15th<br>
+          </td>
+          <td valign="top">Creating and managing processes<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 16th<br>
+          </td>
+          <td valign="top">Writing your own shell<br>
+          </td>
+          <td valign="top">Chapter 4 (read on your own)<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 18th<br>
+          </td>
+          <td valign="top">System constants and process creation<br>
+          </td>
+          <td valign="top">Chapter 5 <br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 22nd<br>
+          </td>
+          <td valign="top">System call handling<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 23rd<br>
+          </td>
+          <td valign="top">Message queues and Disk I/O<br>
+            [Run the command: lspci -v]<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 25th<br>
+          </td>
+          <td valign="top">Pre-empting system calls, threads, memory and
+            I/O address space<br>
+          </td>
+          <td valign="top">Additional slides: <a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/files/bookppts/Chapter_12_Input_Output_and_Storage_Devices.pptx">slides
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              on I/O</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 29th<br>
+          </td>
+          <td valign="top">Atomic operations, Peterson's lock,
+            Test-and-exchange<br>
+          </td>
+          <td valign="top">GCC atomics: <a
+              href="https://gcc.gnu.org/onlinedocs/gcc/_005f_005fatomic-Builtins.html">link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 30th<br>
+          </td>
+          <td valign="top">Compare-and-set, The consensus problem,&nbsp;
+            Multiprocessor operating systems<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 1st<br>
+          </td>
+          <td valign="top">Kernel stacks, Multiprocessing within the
+            kernel<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 8th<br>
+          </td>
+          <td valign="top"><b>Discussion on Minor 1</b><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 12th<br>
+          </td>
+          <td valign="top">Inter-process communication using message
+            queues<br>
+          </td>
+          <td valign="top">Chapter 7<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 13th<br>
+          </td>
+          <td valign="top">Software interrupts, and signal handlers.
+            Rendezvous patterns.<br>
+          </td>
+          <td valign="top">1. Signals in C, <a
+              href="https://www.geeksforgeeks.org/signals-c-language/">link</a><br>
+            2. Linux signal handling. <a
+              href="https://www.linuxjournal.com/article/3985">link</a><br>
+            3. Signal handling.<a
+href="https://www.usna.edu/Users/cs/aviv/classes/ic221/s16/lec/19/lec.html">
+              link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 19th<br>
+          </td>
+          <td valign="top">Reader-writer lock, and binary semaphores<br>
+          </td>
+          <td valign="top">Chapter 8<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 20th<br>
+          </td>
+          <td valign="top">Counting semaphores, Scheduling schemes:
+            FCFS, shortest job first, round-robin<br>
+          </td>
+          <td valign="top">Chapter 8<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 22nd<br>
+          </td>
+          <td valign="top">Deadlocks, two-phase locking, acquiring
+            resources in an increasing order of ids, The<br>
+            dining philosopher's problem, Safety, Liveness, Deadlock
+            avoidance, prevention, and recovery<br>
+            [<b><font color="#003333">Self Study</font></b>: Chapter 9]<br>
+          </td>
+          <td valign="top">Chapter 8 (finished)<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 26th<br>
+          </td>
+          <td valign="top">Process of compilation and linking,
+            dynamically linked libraries.<br>
+            Linux <b><font color="#336666">commands: </font></b>nm,
+            objdump, strip, ldd<br>
+          </td>
+          <td valign="top">Chapter 10<br>
+            Creating static/dynamic<br>
+            libraries in Linux.<a
+href="https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index">
+              (link)</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 27th<br>
+          </td>
+          <td valign="top">Process of linking and loading, load-time and
+            run-time linking, buddy allocator, linked-list based memory
+            allocator, bitmap based allocator<br>
+          </td>
+          <td valign="top">Buddy allocator<a
+              href="https://en.wikipedia.org/wiki/Buddy_memory_allocation">
+              (link)</a><br>
+            Linux slab allocator<a
+href="https://www.kernel.org/doc/gorman/html/understand/understand011.html">
+              (link)</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar 1st<br>
+          </td>
+          <td valign="top">Background on virtual memory (overlap +
+            size), swap space, page tables (1-level and 2-level), TLBs<br>
+          </td>
+          <td valign="top"><a href="https://youtu.be/7HMXg3W-5HE">link</a>
+            to slides<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar 12th<br>
+          </td>
+          <td valign="top">Clarifications on homework 2<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar 13th<br>
+          </td>
+          <td valign="top">Stack smashing, code reuse attacks and code
+            injection attacks, buffer overflows, segmentation<br>
+          </td>
+          <td valign="top">Code for the buffer overflow attack: <a
+              href="stack_break.c">link</a><br>
+            Code reuse attack: <a
+              href="https://en.wikipedia.org/wiki/Return-oriented_programming">link</a><br>
+            Stuxnet worm: <a
+              href="http://large.stanford.edu/courses/2015/ph241/holloway1/">link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar<br>
+            15th<br>
+          </td>
+          <td valign="top">Page table, TLB, swap space<br>
+          </td>
+          <td valign="top"><a href="https://youtu.be/7HMXg3W-5HE">link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar 19th<br>
+          </td>
+          <td valign="top">Replacement policies, stack distance, FIFO,
+            Belady's anomaly<br>
+          </td>
+          <td valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/os/slides/replacement.ppt">link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar 20th<br>
+          </td>
+          <td valign="top">LRU, LFU, MFU, MRU, Optimal algorithm<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar 22nd<br>
+          </td>
+          <td valign="top">Working sets, WS-Clock algorithm, Thrashing,
+            Copy-on-write<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td colspan="3" rowspan="1" valign="top"><font color="#993300"><b>Minor
+
+
+
+
+
+
+
+
+
+
+                2</b></font><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Mar<br>
+            29th<br>
+          </td>
+          <td valign="top">I/O systems: physical (transmission) layer<br>
+          </td>
+          <td valign="top">slides: <a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/files/bookppts/Chapter_12_Input_Output_and_Storage_Devices.pptx">link</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 2nd<br>
+          </td>
+          <td valign="top">Types of buses (synchronisation layer),
+            framing, error detection, I/O ports<br>
+          </td>
+          <td valign="top">Notes of this part in Scopes<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 3rd<br>
+          </td>
+          <td valign="top">Network and protocol layers, PCI-Express and
+            USB<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 5th<br>
+          </td>
+          <td valign="top">Hard disks, and CD drives<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 9th<br>
+          </td>
+          <td valign="top">USB drives<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 10th<br>
+          </td>
+          <td valign="top">RAID, FAT file system<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 12th<br>
+          </td>
+          <td valign="top">File system basics, hard links, soft links,
+            mounting, unmounting<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 16th<br>
+          </td>
+          <td valign="top">I-nodes, disk defragmentation, disk access
+            scheduling (elevator algorithm, optimized algorithms)<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 23rd<br>
+          </td>
+          <td valign="top">Basic concepts in OS security, Type 0, 1, and
+            2 hypervisors<br>
+          </td>
+          <td valign="top"><a
+              href="https://www.os-book.com/OS9/slide-dir/PPT-dir/ch16.ppt">Virtual
+              machine slides</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 24th<br>
+          </td>
+          <td valign="top">Guest lecture on Cryptography (Prof. Ragesh
+            Jaiswal)<br>
+          </td>
+          <td valign="top"><a href="Lecture-ragesh.pdf">slides</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Apr 26th<br>
+          </td>
+          <td valign="top">Guest lecture on Cryptography (continued)<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

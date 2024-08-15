@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css">
+@import "layout.css";
+</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; 
+ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; 
+s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head><body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1>
+				<a href="index.html">
+					<div class="image-style1 image-style1a">
+						<img src="images/logo.png" alt="" height="100" width="200" />
+					</div>
+				</a>
+				</h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" accesskey="1" title=""><span>Home</span></a></li>
+					<li><a href="overview.html" accesskey="2" title=""><span>Overview</span></a><br />
+</li>
+					<li><a href="license.html" accesskey="3" title=""><span>License</span></a></li>
+					<li class="active"><a href="install.html" accesskey="4" title=""><span>Installation</span></a></li>
+					<li><a href="contact.html" accesskey="6" title=""><span>Contact Us</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="top-header" class="container">
+			<h2>Tejas Installation</h2>
+		</div>
+	</div>
+	<div id="bg1">
+		<div id="bg2">
+			<div id="bg3">
+				<div id="page" class="container">
+					<div id="wide-content">
+						<div id="box1" class="box-style">
+							<div class="content">
+
+
+<p>
+<big>
+Please download the tar-ball, extract the contents, and follow the instructions as mentioned in the manual.
+</big>
+</p>
+							<ul><big>
+								</big>
+					<li><big><a class="no-dec-color"
+                                            onclick="_gaq.push(['_trackEvent',
+                                            'Downloads', 'software',
+                                            'TejasJava']);"
+                                            href="home_files/tejasjava_installation_kit.tar.gz">Installation Kit</a></big>
+					</li>					
+
+</ul><big><br />
+</big>
+
+<br />
+<br />
+
+<p>
+<big>
+The below manual gives the complete steps for installing, running benchmarks on TejasJava.
+</big>
+</p>
+
+<ul>
+  <li><a href="home_files/TejasJava_manual.pdf"><span>TejasJava Setup Manual</span></a></li>
+  
+</ul>
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>Copyright (c) 2015 Indian Institute of Technology, Delhi. All rights reserved.</p>
+</div>
+</body></html>

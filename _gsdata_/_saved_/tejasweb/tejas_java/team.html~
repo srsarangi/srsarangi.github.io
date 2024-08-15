@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Team</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css">
+@import "layout.css";
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="header-wrapper">
+<div id="header" class="container">
+<div id="logo">
+<h1>
+<a href="index.html">
+<div class="image-style1 image-style1a">
+<img src="images/logo.png" width="200" height="100" alt="" />
+</div>
+</a>
+</h1>
+</div>
+<div id="menu">
+<ul> 
+<li><a href="index.html" accesskey="1" title=""><span>Home</span></a></li>
+<li><a href="overview.html" accesskey="2" title=""><span>Overview</span></a></li>
+<li><a href="license.html" accesskey="3" title=""><span>License</span></a></li>
+<li><a href="install.html" accesskey="4" title=""><span>Installation</span></a></li>
+<li><a href="contact.html" accesskey="6" title=""><span>Contact Us</span></a></li>
+</ul>
+</div>
+</div>
+<div id="top-header" class="container">
+<h2></h2>
+</div>
+</div>
+<div id="bg1">
+<div id="bg2">
+<div id="bg3">
+<div id="page" class="container">
+<div id="wide-content">
+<div id="box1" class="box-style">
+<div id="box2" class="box-style">
+<h2 class="title">Our Team</h2>
+<div class="content">
+<ul class="style1">
+
+<table>
+	<tr>
+			<td>
+				<table>
+					<tr>
+						<td><div><img src="images/srsarangi.jpg" width="90" height="90" alt="" /></div></td>
+						<td>
+							<h3>S.R. Sarangi</h3>
+							<p>Asst. Professor, Department of CSE, IIT Delhi</p> <br>
+						</td>
+					</tr>
+				</table>										
+			</td>
+
+			<td>
+				<table>
+					<tr>
+						<td><div><img src="images/priyanka.jpg" width="90" height="90" alt="" /></div></td>
+						<td>							
+							<h3>Priyanka Bhayana</h3>
+							<p>Master of Technology, Department of CSE, IIT Delhi.  <br>
+							<a href="https://www.linkedin.com/pub/priyanka-bhayana/29/7b9/806" target="_blank">Contact</a>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr>
+						<td><div><img src="images/pallavi.png" width="90" height="90" alt="" /></div></td>
+						<td>
+							<h3>Pallavi Sethi</h3>
+							<p>Master of Technology, Department of CSE, IIT Delhi</p> <br>
+						</td>
+					</tr>
+				</table>
+				
+			</td>
+
+	</tr>
+	
+
+
+</table>
+	
+</ul>
+</div>
+</div>
+<p></p>
+<h2 class="title">Past Members</h2>
+<div class="content">
+<ul class="style1">
+
+<table>
+	<!--<li>-->
+	<tr>
+	<!--<table>-->
+		<!--<tr>-->
+			
+			<td>
+				<table>
+					<tr>
+						<td><div><img src="images/shashank.png" width="90" height="90" alt="" /></div></td>
+						<td>
+							<h3>Shashank Gupta</h3>
+							<p>Bachelor of Technology, Department of CSE, IIT Delhi</p> <br>
+						</td>
+					</tr>
+				</table>
+			</td>
+
+			<td>
+				<table>
+					<tr>
+						<td><div><img src="images/vishal.png" width="90" height="90" alt="" /></div></td>
+						<td>
+							<h3>Vishal Jain</h3>
+							<p>Bachelor of Technology, Department of CSE, IIT Delhi</p> <br>
+						</td>
+					</tr>
+				</table>
+			</td>
+
+			
+	</tr>
+
+</table>
+</ul>
+</div>
+</div>
+	
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>Copyright (c) 2015 Indian Institute of Technology, Delhi. All rights reserved.</p>
+</div>
+</body>
+</html>

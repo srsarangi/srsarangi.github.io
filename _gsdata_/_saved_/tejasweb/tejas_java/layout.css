@@ -1,0 +1,69 @@
+/** WRAPPER */
+
+#wrapper {
+}
+
+/** HEADER */
+
+#header {
+}
+
+/** LOGO */
+
+#logo {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 188px;
+}
+
+#logo h1, #logo p {
+	margin: 0px;
+	line-height: normal;
+	text-indent: -9999em;
+}
+
+#logo h1 a {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(images/homepage01.jpg) no-repeat left top;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+/** MENU */
+
+#menu {
+}
+
+/** PAGE */
+
+#page {
+}
+
+/** CONTENT */
+
+#content {
+}
+
+/** SIDEBAR */
+
+#sidebar {
+}
+
+/** FOOTER */
+
+#footer {
+}

@@ -1,0 +1,1712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    <title> ELL 782: Computer Architecture </title>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Computer Architecture<br>
+      </h1>
+      <h3> <font color="blue">Course: ELL782 and COL 718<br>
+          Semester I, 2018-19<br>
+          Credits: 3 (3-0-0) for ELL 782 and 4 for COL 718<br>
+        </font></h3>
+    </div>
+    <br>
+    <b><font <br="" color="maroon"> <br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> Dr.
+          Smruti R. Sarangi </a> <br>
+        <br>
+        Lectures</font></b>: Mon, Thu 9:30-10:50. Block IV 254, Piazza <a
+      href="http://piazza.com/iit_delhi/fall2018/col718ell782">link</a><br>
+    <b><font <br="" color="maroon"> Course Description:</font> </b>
+    This course will give an introduction to designing and programming
+    high performance processors.<br>
+    <br>
+    <b><font <br="" color="maroon"> Course Load: </font></b>Exams +
+    assignments<br>
+    <br>
+    <b><font color="maroon">Evaluation</font></b><b><font <br=""
+        color="maroon">:&nbsp;</font></b> Minor 1 (15%), Minor 2 (15%),
+    Major (25%), 3 Assignments (12% + 12% + 16%), Attendance (5%) (via
+    Timble)<br>
+    <br>
+    <b><font color="maroon">Teaching Assistants</font></b><b><font
+        <br="" color="maroon">:&nbsp;</font></b> Hameedah Sultan, Diksha
+    Moolchandani, Ankit Gola, Anand Singh<br>
+    <br>
+    <b><font <br="" color="maroon"> <br>
+      </font></b><b><font color="maroon">Textbook: </font></b><br>
+    <b>Background on processors and caches:</b> <small><span
+        style="color: rgb(51, 102, 255);"><span style="color: rgb(153,
+          51, 153);"><span style="color: rgb(51, 102, 255);"><span
+              style="color: rgb(153, 51, 153);"><span style="color:
+                rgb(51, 102, 255);"><span style="color: rgb(153, 51,
+                  153);"><span style="color: rgb(51, 102, 255);"><span
+                      style="color: rgb(153, 51, 153);"><span
+                        style="color: rgb(51, 102, 255);"><span
+                          style="color: rgb(153, 51, 153);"><span
+                            style="color: rgb(51, 102, 255);"><span
+                              style="color: rgb(153, 51, 153);"><span
+                                style="color: rgb(153, 51, 153);"><span
+                                  style="color: rgb(153, 51, 153);"><span
+                                    class="Apple-style-span"
+                                    style="border-collapse: separate;
+                                    font-style: normal; font-variant:
+                                    normal; font-weight: normal;
+                                    letter-spacing: normal; line-height:
+                                    normal; orphans: 2; text-indent:
+                                    0px; text-transform: none;
+                                    white-space: normal; widows: 2;
+                                    word-spacing: 0px; font-size:
+                                    medium;"><span
+                                      class="Apple-style-span"><span
+                                        class="Apple-style-span"
+                                        style="border-collapse:
+                                        separate; font-style: normal;
+                                        font-variant: normal;
+                                        font-weight: normal;
+                                        letter-spacing: normal;
+                                        line-height: normal; orphans: 2;
+                                        text-indent: 0px;
+                                        text-transform: none;
+                                        white-space: normal; widows: 2;
+                                        word-spacing: 0px; font-size:
+                                        medium;"><span
+                                          class="Apple-style-span"><big><span
+                                              style="color: black;"><small>Computer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                Organisation and
+                                                Architecture, Smruti R.
+                                                Sarangi, McGrawHill
+                                                India. Link to <a
+                                                  href="http://www.cse.iitd.ac.in/%7Esrsarangi/buyitlink.html">buy</a>.
+                                                Slides, and videos (<a
+                                                  href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">link</a>)</small></span></big></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></small><br>
+    <br>
+    <br>
+    <table height="437" border="1" cellpadding="2" cellspacing="2"
+      width="1300">
+      <tbody>
+        <tr>
+          <td valign="top"><b>S. No.</b><br>
+          </td>
+          <td valign="top"><b>Date</b><br>
+          </td>
+          <td valign="top"><b>Lecture</b><br>
+          </td>
+          <td valign="top"><b>Slides</b><br>
+          </td>
+          <td valign="top"><b>References</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">1.<br>
+          </td>
+          <td valign="top">26th July<br>
+          </td>
+          <td valign="top">Course policies. Instruction sets. <br>
+          </td>
+          <td valign="top"><a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/files/bookppts/Chapter_03_Assembly_Language.pptx">Slides</a>
+            on assembly language<br>
+          </td>
+          <td valign="top">Book website: <a
+              href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">link</a><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td colspan="5" rowspan="1" valign="top"><b>Out-of-Order
+              Pipelines</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">2.<br>
+          </td>
+          <td valign="top">30th July<br>
+          </td>
+          <td valign="top">Instruction sets, and basic processor design.<br>
+          </td>
+          <td valign="top"><a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/files/bookppts/Chapter_08_Processor_Design.pptx">Slides</a>
+            on processor design<br>
+          </td>
+          <td valign="top"><font color="#990000"><b>Read </b></font>three
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            chapters: Assembly language, processor design<br>
+            and principles of pipelining from Computer Organisation<br>
+            and Architecture. (Sarangi, McGrawHill, 2015)<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">3.<br>
+          </td>
+          <td valign="top">2nd August<br>
+          </td>
+          <td valign="top">Basic OOO processor design and branch
+            predictors.<br>
+          </td>
+          <td valign="top"><a href="lectures/OOOpipelines.pptx">OOO
+              Execution - I</a></td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">4.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">6th August<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Branch Prediction<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/branchpred/alternative-impl.pdf">Two
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              level prediction</a>, <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/branchpred/branchpred2.pdf">Two
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              level prediction-II</a>,&nbsp; <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/branchpred/agree-predictor.pdf">Agree
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              predictor</a>, <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/branchpred/branch-pred-many.pdf">General
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              techniques</a>, <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/branchpred/third-level.pdf">Three
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              level adaptive</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">5.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">9th August<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Register Renaming and the
+            select unit<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/OOO-II.pptx">OOO - II</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/microarch.pdf">Processor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              microarchitecture book</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/palacharla.pdf">Quantifying
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              the complexity of superscalar processors</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/renamingsima.pdf">Design
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              space of renaming techniques</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">6.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">13th Aug<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Wakeup, Bypass, Broadcast,
+            Select<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">7.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">18th Aug<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Load-Store Queue, Commit<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/lsq.pdf">Optimized
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Load Store Queue</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">8.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">20th Aug.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Recovery from speculation:
+            RRF and RRAT, SRAM vs CAM based checkpoints. ROB based OOO<br>
+            processor design.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/OOO-III.pptx">OOO-III</a> </td>
+          <td bgcolor="#ffffff" valign="top">Circular queues (<a
+              href="circqueue.jpg">photo</a> of white board)<br>
+            Circular queues: <a
+href="https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/">link</a><br>
+            Diagram of the pipeline: <a href="pipeline.jpg">image</a><br>
+            Pipeline loops: read <a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/files/papers/isca07_recycle.pdf">paper</a>
+            (Section 2.2)<br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">9.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">27th Aug<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Little's Law [self-study]<br>
+            Intro. to scheduling and replay<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="https://en.wikipedia.org/wiki/Little%27s_law">Little's
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Law</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/replay.pdf">Scheduling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              and Replay</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">10.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">30th Aug<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Non-Selective and Deferred
+            Selective Replay<br>
+            Token based replay<br>
+            Basics of SRAM cells<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/lsspec.pdf">Load
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              store speculation</a>, <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/store-sets.pdf">store
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              sets</a>, <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/dynamic-track.pdf">dynamic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              dependence tracking</a>,<a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/renameissue/cloak-bypass.pdf">
+              memory cloaking and bypassing</a><br>
+            Background: See slides for Chapter 6 (<a
+              href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">link</a>)<br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td colspan="5" rowspan="1" valign="top"><b>The Memory System</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">11.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">6th Sep<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">DRAM cells (and arrays),
+            CAM cells<br>
+            Temporal locality (+ stack distance)<br>
+            Spatial locality (+ address distance)<br>
+            Memory hierarchy: i-cache, d-cache (L1), L2, L3, ...<br>
+            Fully associative, set associative, and direct mapped caches<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Background: See slides for
+            logic registers, and memories (<a
+              href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">link</a>)<br>
+            <br>
+            [self-study]: Read the chapter on the memory system. Slides
+            at <a
+              href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">link</a>.&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">12.<br>
+          </td>
+          <td valign="top">10th Sep<br>
+          </td>
+          <td valign="top">1. Types of cache misses<br>
+            2. Methods to increase the hit rate, reduce miss penalty<br>
+            3. Average memory access time computation<br>
+            4. Virtual memory<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">13.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">13th Sept.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Instruction prefetching<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/prefetching.pptx">Inst. Prefetching</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/cgp.pdf">CGP</a>,
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/markov.pdf">Markov,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </a><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/pif.pdf">PIF</a>,
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/rdip.pdf">RDIP</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">14<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">17th Sept<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Pentium Trace Cache, stride
+            based inst. prefetching<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/intel-trace-cache.pdf">Trace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              cache patent</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/dataprefetchsurvey.pdf">Survey</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">15<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">20th Sept.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Runahead Execution, Caches
+            with Cacti </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/dataprefetch.pptx">Data Prefetching</a><br>
+            <a href="lectures/Caches.pptx">Caches</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/prefetching/runahead_execution.pdf">Runahead
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Execution</a><br>
+            <a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/mcch.pdf">Multi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              core memory systems (book)</a>, <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/memory/cactireport.pdf">Cacti
+
+
+
+
+
+
+
+
+
+
+
+
+              Report</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">16<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">24th Sept.<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">NUCA Caches<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/memory/snuca.pdf">S-NUCA</a>,
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/memory/rnuca.pdf">R-NUCA</a></td>
+        </tr>
+        <tr>
+          <td valign="top">17<br>
+          </td>
+          <td valign="top">27th Sept.<br>
+          </td>
+          <td valign="top">R-NUCA overview<br>
+            Network topologies<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/files/bookppts/Chapter_11_Multiprocessor_Systems.pptx">Network
+
+
+
+
+
+
+
+
+
+
+              slides </a>: Slides 99-109<br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">18<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">8th<br>
+            Oct<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Basics of On Chip Networks
+            <br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/routing.pdf">Routing</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/On-chip-networks.pdf">On
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              chip networks (book)</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">19<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">11th Oct<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Routing and Flow Control <br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/flow.ppt">Flow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Control</a></td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">20<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">22nd Oct<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Design of Routers<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/router-microarch.ppt">Router
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Micro-arch</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/noc/allocimpl.pdf">Allocator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Implementations</a></td>
+        </tr>
+        <tr align="center">
+          <td colspan="5" rowspan="1" valign="top"><b>Multiprocessor
+              Systems</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">21<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">25th Oct<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">1. Limits to single-core
+            performance<br>
+            2. E is propto CV^2<br>
+            3. P is propto CV^2f<br>
+            4. P grows as f^3<br>
+            5. T = AP<br>
+            6. Leakage-temperature loop<br>
+            7. Reliability and temperature relationship<br>
+            8. Idea of multicores<br>
+            9. Simple program in OpenMP<br>
+            10. Moore's Law<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">link
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              to slides</a> (Chapter 11)<br>
+            <br>
+            Power and temperature<br>
+            (<a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/cov_881_2016/slides/power_and_temp.pptx">slides</a>)<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">1. Slides on hard errors (<a
+href="http://www.cse.iitd.ac.in/%7Esrsarangi/cov_881_2016/slides/hard_errors.pdf">link</a>).
+
+
+
+
+
+
+            Just the basic idea of errors is<br>
+            in the syllabus. Leave out the details.<br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">22<br>
+          </td>
+          <td valign="top">27th Oct<br>
+          </td>
+          <td valign="top">1. Programs in MPI<br>
+            2. Amdahl's Law<br>
+            3. Flynn's classification<br>
+            4. SIMD processors, and SSE instructions<br>
+            5. Axioms of coherence<br>
+            6. Sequential consistency<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">23<br>
+          </td>
+          <td valign="top">29th Oct<br>
+          </td>
+          <td valign="top">1. Write atomicity: coherent systems need not
+            have write atomicity<br>
+            2. Memory model = atomicity + ordering<br>
+            3. Difference between SC and coherence<br>
+            4. Weak memory models<br>
+            5. Writing programs in weak memory models<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">24<br>
+          </td>
+          <td valign="top">1st Nov<br>
+          </td>
+          <td valign="top">1. Snoopy coherence protocols: write-update
+            and write-invalidate<br>
+            2. Multi-threading<br>
+            3. GPUs [<b><font color="#006600">self study</font></b>]<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/arch/cohconst.pdf">Primer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              on Cache Coherence and Memory Consistency(book)</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">25<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">3rd Nov<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Directory Coherence and
+            Atomic Primitives </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/coherence.pptx"> Directory Coherence </a>
+          </td>
+          <td bgcolor="#ffffff" valign="top"> <br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">26<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">5th Nov<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Memory Consistency Models<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/consistency.pptx">Memory Consistency</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">A Formal Hierarchy of Weak
+            Memory Models <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/multiprocs/fmsd.pdf">
+              (link)</a><br>
+            Tutorial on Shared Memory Models <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/col_718_2017/papers/multiprocs/sharedmemtut.pdf">(link)</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">27<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">12th Nov<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top">Transactional Memory<br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="lectures/trans-memory.pptx">Transactional Memory </a>
+          </td>
+          <td bgcolor="#ffffff" valign="top"> <br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">28<br>
+          </td>
+          <td valign="top">15th Nov<br>
+          </td>
+          <td valign="top">Talk on Quantum Computing <br>
+            Dr. Moitreyee Roy, IBM Almaden Research Labs<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <b><font <br="" color="maroon"></font></b>
+  </body>
+</html>

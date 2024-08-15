@@ -1,0 +1,55 @@
+1) Example 30:
+	Should be cmp r1, r2
+    Variable index should be removed
+
+2) Algorithms 5 and 6 (page 351):
+    In the forwarding conditions: not and mov instructions not taken care of
+
+3) Division algorithm should be made clearer. We need to say that we are considering
+n bit 2's complement numbers that can only be positive.
+
+4) Memory system: Question 25, percentage of memory accesses missing, TLB insert time
+
+5) Example 121: j --> jdx
+
+6) Microprogramming: Implement a processor where the return address is passed via the stack.
+We should not be adding 4 to the PC again the routine. We are already adding 4 to the PC
+in the preamble. Example 104: We should <store> for memory operations other than <write>
+
+7) Page 382: Inserting bubbles reduces the CPI --> should be increasing
+
+8) Figure 7.18 : W <-- P_B (statement is not required and is redundant)
+
+9) Page 315, The call instruction --> We should not be incrementing the PC once again
+It is already incremented in the preamble.
+
+10) Figure 8.22: ldResult, mar, mdr, aluResult, regVal, regData, and regSrc can read
+and write to the bus.
+
+11) Page 646: #define N 1024; 
+should be
+#define N 1024
+
+12) Figure B.4 (Page 644)
+The 3 warps at the bottom should be
+Warp 3, instruction 96
+Warp 8, instruction 12
+Warp 1, instruction 43
+
+13) Figure 6.31.
+In a DRAM array, the sense amplifier comes first, and then the column mux. Not the other way
+round. 
+
+14) Table 4.5 : The mul instruction in ARM does not support an immediate. 
+
+15) In the chapter on ARM instructions, it is necessary to mention the existence of a .div and .mod
+assembler directive, particularly for the exercises.
+
+16) Section 6.2.3: A decoder and demultiplexer are not the same. A decoder sets one out
+of 2^n inputs to 1. A demultiplexer is similar. However, it sets one out of 2^n inputs
+to a given input value.
+
+17) Figure 6.19 --> Should be J-K 
+
+18) Flash memory: If the threshold voltage is equal to V_T+, then the transistor is in the
+off state. It is erroneously written as "greater than".

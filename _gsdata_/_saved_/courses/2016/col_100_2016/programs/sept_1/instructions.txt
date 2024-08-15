@@ -1,0 +1,6 @@
+gcc curve.c -lm
+./a.out > curve
+gcc integral.c -lm
+./a.out > integral
+gnuplot
+In the gnuplot terminal type: plot "curve" s b, "integral" s b

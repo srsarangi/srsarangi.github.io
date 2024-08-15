@@ -1,0 +1,132 @@
+\documentclass[margin=0.1in]{article}
+
+\usepackage{url}
+
+\begin{document}
+
+\title{Setting Up {\em Tejas}}
+\date{}
+\maketitle
+
+
+\subsection*{Getting Started}
+
+\begin{enumerate}
+
+\item
+Place the installation script {\em install\_tejas.py} in the folder where you wish to place the source code of Tejas. A copy of the script can be found at \url{http://www.cse.iitd.ernet.in/~srsarangi/tejas/home_files/install_tejas.py}.
+
+\item
+Run the script : {\em python install\_tejas.py}.
+
+\item
+The script first prints the list of required packages. Make sure you have the same installed.
+
+\item
+You will be prompted for your installation method preference -- `1' to 
+install from a downloaded tar-ball (tar-balls available at \url{http://www.cse.iitd.ernet.in/~srsarangi/tejas/install.html})
+, or `2' to clone a mercurial repository. If you decide to clone,
+use ``guest" as the username and ``guest1" as the password.
+
+\item
+Tejas uses Intel PIN. Please download version 62732 from \url{http://software.intel.com/en-us/articles/pintool-downloads}.
+Please read the licence at \url{http://software.intel.com/sites/landingpage/pintool/extlicense.txt} before downloading.
+Provide the absolute path to the downloaded tar-ball at the prompt.
+
+\item
+The script then builds Tejas, configures it, and simulates a simple ``Hello World" program
+to help verify successful installation. Please check if the output file is generated (the path of the output file is printed by the script).
+
+
+\end{enumerate}
+
+
+\subsection*{Running Simulations}
+
+\begin{itemize}
+
+\item
+The configurations used by the simulator (for example, size of the L1 cache) are mentioned in a configuration file -- a sample file is given in {\em tejas-dir/src/simulator/config/config.xml}. Create copies of this file and make changes as required.
+
+\item
+Run the following commands in {\em tejas-dir}:
+\begin{itemize}
+\item ant clean
+\item ant
+\item ant make-jar -- this creates a jar file {\em tejas-dir/jars/tejas.jar}.
+
+To change the jar filename, change line 5 of {\em tejas-dir/build.xml} accordingly.
+
+\item java -jar {\em jar-file} {\em config-file} {\em result-file} {\em benchmark}.
+
+The outcome of the simulation is written to {\em result-file}; {\em benchmark} is the x86 executable that is to be simulated. Note : always use absolute pathnames for specifying the arguments.
+\end{itemize}
+
+\item
+It is recommended to use the eclipse IDE to work with Tejas. Eclipse can be freely downloaded. Depending on the version of eclipse,
+
+\begin{itemize}
+\item
+In File$\rightarrow$New$\rightarrow$Java Project, create a project from existing source, namely, {\em tejas-dir}, OR,
+\item
+Go through File$\rightarrow$Import$\rightarrow$General$\rightarrow$Existing projects into workspace, and use {\em tejas-dir} as the root directory.
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection*{General Instructions}
+
+\begin{itemize}
+
+\item
+Please use absolute paths always.
+
+\item
+The {\em pin-dir} used in {\em tejas-dir/src/emulator/pin/makefile.gnu.config} and the configuration file must be the same.
+
+\end{itemize}
+
+
+
+\subsection*{Trouble Shooting the set-up}
+
+\begin{itemize}
+
+\item
+If the error message displayed is ``pin.h not found",\\
+check the {\em tejas-dir/src/emulator/pin/makefile.gnu.config} file if {\em PIN\_KIT} is set correctly to {\em pin-dir}.
+
+\item
+If the error message displayed is ``jni.h not found", locate where Java is installed on your system, and accordingly update JNINCLUDE in the file {\em tejas-dir/src/emulator/pin/makefile}.
+
+\item
+If the error message is of the form :\\
+\\
+E:Attach to pid 27344 failed.\\
+E:  The Operating System configuration prevents Pin from using the default (parent) injection mode.\\
+E:  To resolve this, either execute the following (as root):\\
+E:  \$ echo 0 $>$ /proc/sys/kernel/yama/ptrace\_scope\\
+E:  Or use the "-injection child" option.\\
+E:  For more information, regarding child injection, see Injection section in the Pin User Manual.\\
+\\
+\\
+run the command ``echo 0 $>$ /proc/sys/kernel/yama/ptrace\_scope" as the root user.
+
+
+\end{itemize}
+
+\subsection*{Updating Tejas}
+To update the current version of Tejas,
+\begin{itemize}
+\item
+Set up the current source as a mercurial repository (required for source obtained through the tar-ball method)
+\item
+Run the command ``hg pull http://www.cse.iitd.ac.in/srishtihg/hg/distrib/Tejas''. The username is ``guest" and password is ``guest1".
+\item
+Run the command ``hg update". Resolve merge conflicts, if any.
+\item
+See \url{http://mercurial.selenic.com/wiki/Tutorial} and \url{http://hgbook.red-bean.com/} for help regarding mercurial.
+\end{itemize}
+
+\end{document}
