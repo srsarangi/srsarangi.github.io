@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>ELL 783 and ELL 405: Operating Systems</title>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NE1TKLNT4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6NE1TKLNT4');
+</script>
+
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Operating Systems<br>
+      </h1>
+      <h3> <font color="blue">Course: ELL 783 and ELL 405<br>
+          Semester II, 2022-23<br>
+          Credits: 4 (3-0-2) <br>
+        </font></h3>
+    </div>
+    <p><br>
+      <b><font   color="maroon"> <br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> <font
+            color="#000099">Prof. Smruti R. Sarangi </font></a> <br>
+        <br>
+        Lectures</font></b>: 11 AM to 12 PM (Tue, Thu, Fri), LH 316<br>
+    <br>
+    <b><font color="#660000">Piazza link:</font></b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://piazza.com/iit_delhi/spring2023/ell783">Link</a><br>
+    <b><font   color="maroon"><br>
+      </font></b> <font color="#990000"><b>Office Hours</b></font>:
+    Just send me an e-mail.</p>
+    <p><font color="#993300"><b>Evaluation Criteria</b>:<font color="#000000"> Minor 1 and 2 (15% each), Major: 30%, Three assignments (10% + 15% + 15%)<br>
+          <span style="color: #357710">Passing criteria</span>: 18% in theory and 12% in the assignments (both the criteria need to be met) <br>
+          <span style="color: #A61F21">Audit criteria</span>: 24% in theory and 16% in the assignments (again both the criteria need to be met)<br>
+For those who miss a minor, there will be an extra minor towards the end of the course, which will be much harder.<br>
+There will be no assignment deadline extensions unless there is a serious personal reason or a medical reason</font></font>.</p>
+    <ul>
+      <li><font color="#993300"><font color="#000000">For each <span style="color: #142AC7">assignment</span>, there will be an easy and hard version. The latter will be based on the Linux kernel. The student<br>
+        can choose to do either one. </font></font>Note that assignments may be associated with a viva that will check the student's understanding;<br>
+        if she does not do well in her viva, then she will get low marks regardless of the assignment that was submitted. <br>
+      </li>
+      <li><font color="#993300"><font color="#000000"> Assignments (<span style="color: #1138CC">easy</span> track): They will be based on <a href="https://github.com/mit-pdos/xv6-public">xv6</a></font></font>. The first assignment will be a solo assignment and the rest two<br>
+        will be done in groups. </li>
+      <li>Assignments (<span style="color: #E5181B">hard</span> track): All three will be solo assignments and will be graded quite seriously. They will have a bonus<br>
+        component associated with them. 
+        They will give the student, serious experience with the Linux kernel. </li>
+      <li>If a student finishes all three assignments in the <span style="color: #DC0408">hard</span> track, then she can carry the bonus marks (max: 12.5) to her course total. <br>
+        However, the caveat is that the bonus marks cannot be used to pass the student if she is otherwise failing. The bonus<br>
+        marks can thus help increase her grade.</li>
+      <li>Please don't send any individual mails. For those who miss a minor or an assignment, we will hold an extra minor and issue an<br>
+        extra assignment towards the end of the course. Please note that to 
+      ensure a level playing field, this will be much harder than the<br>
+      original minor/assignment, respectively.
+      The assignment needs to be done individually. No medical certificates need to be provided.</li>
+    </ul>
+    <p>
+    
+      <br>
+      <b><font color="maroon">Teaching Assistants</font></b><b><font
+         color="maroon">: </font></b><br>
+      
+    </p>
+    <table width="772" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr style="height:17.0pt" height="23">
+          <td rowspan="1" class="xl77" style="border-bottom:2.0pt double
+            black; height:98.0pt;border-top:none" height="130"><p>1. Shruti Pandey <br> 2. Nivedita Shrivastava <br> 3. Akanksha Dixit</p>           
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <b><font color="maroon">Reference Books</font></b><br>
+    <font color="#3333ff">[Textbook]</font>&nbsp;Understanding the Linux Kernel: From I/O Ports to Process Management, Third Edition, Bovet and Cesati<br>
+    <b><font   color="maroon"><br>
+      </font></b><b><font   color="maroon">Lectures and Slides:<br>
+      </font></b><br>
+    <table width="1136" border="1">
+      <tbody>
+        <tr>
+          <td width="198" valign="top"><b>Date</b><br>
+          </td>
+          <td width="61" valign="top"><b>Lecture</b><br>
+          </td>
+          <td width="362" valign="top"><b>Topics</b><br>
+          </td>
+          <td width="487" valign="top"><b>Link to the Video<br>
+            </b> </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 6th</td>
+          <td valign="top">1</td>
+          <td valign="top">Introduction to the course</td>
+          <td valign="top">What is an OS? [<a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/Eaym4CP431RKpAPJqkn-2r0Bct0jtCKI5pD_wTS2He4ljQ?e=Dfc9MP">slides [Introduction]</a>]</td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 10th</td>
+          <td valign="top">2</td>
+          <td rowspan="3" valign="top">Overview of the computer architecture needed for an OS course</td>
+          <td valign="top">1. Context switches <br> 2. Privileged and non-privileged instructions <br> 
+            3. Rings <br>
+             4. The timer chip <br>
+              5. Interrupts and system calls <br> 
+              [<a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/EWVZpxUXduJItkCtZGI35VoBP-FSnT0LvXAjf9eNuNDYMw?e=hjJ4Ai">slides [Architectural Fundamentals of OSes]</a>]</td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 12th</td>
+          <td valign="top">3</td>
+          <td valign="top">1. x86 assembly<br>
+2. Compilation and linking </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 13th</td>
+          <td valign="top">4</td>
+          <td valign="top"><p>1. Static and dynamic linking<br>
+Links: <a href="https://www.baeldung.com/cs/static-dynamic-linking-differences">link1</a>, <a href="https://domiyanyue.medium.com/c-development-tutorial-4-static-and-dynamic-libraries-7b537656163e">link2</a>,<a href="https://www3.physnet.uni-hamburg.de/physnet/Tru64-Unix/HTML/APS31DTE/DOCU_002.HTM"> link3 [very detailed]</a></p></td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 17th</td>
+          <td valign="top">5</td>
+          <td valign="top">Virtual memory and segmentation</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 19th</td>
+          <td valign="top">6</td>
+          <td valign="top">Virtual memory, I/O, DMA<br>
+Process management</td>
+          <td valign="top">I/O instructions<br>
+Introduction to processes [<a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/Ea5n1h-MRdJMmaYOo-nWxOoBuA5hY8zlEmi9MsCvFiaD9w?e=mpg6PE">slides [Processes]</a>] </td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 20th</td>
+          <td valign="top">7</td>
+          <td rowspan="6" valign="top">Processes</td>
+          <td valign="top">task_struct structure, thread_info</td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 24th</td>
+          <td valign="top">8</td>
+          <td valign="top">Process states, the kernel stack, the <em>current </em>macro</td>
+        </tr>
+        <tr>
+          <td valign="top">Jan 31st</td>
+          <td valign="top">9</td>
+          <td valign="top">CPU local state, the <em>current </em>pointer, process priorities, sched_info, mm_struct and the Maple tree</td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 1st</td>
+          <td valign="top">10</td>
+          <td valign="top">Link to the video <a href="https://youtu.be/yaxcsAt8Mhw"><img src="youtube.png" width="38" height="23" alt=""/></a><br> 
+          Radix tree, pid_t process number, pid structure, namespaces, Van Emde Boas tree, I/O fields and ptracing, </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 2nd</td>
+          <td valign="top">11</td>
+          <td valign="top">fork, clone, and execve. The <em>copy_process</em> function</td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 3rd</td>
+          <td valign="top">12</td>
+          <td valign="top">Context switches, switching to user and kernel processes.</td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 4th</td>
+          <td valign="top">13</td>
+          <td valign="top">Synchronization</td>
+          <td valign="top">Locks and semaphores. <a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/Eakxtsc3JVlElMwZ77IlyCEB9QFFJU0Gnr9dANqSqH9zdA"> [Slides: Synchronization and scheduling]</a> </td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 10th</td>
+          <td valign="top">14</td>
+          <td valign="top">Minor-I paper discussion, interrupts</td>
+          <td valign="top">Minor-I paper discussion. The Interrupt Descriptor Table.<br>
+            Library calls: the flow of <em>printf<br>
+          </em>The <em>write</em> system call's flow: syscall to ksys_write <a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/EVq4IbkdJHhDmLOxsNa4ve4BGGV6peXjyLWigMSRC1Qr0g">[Slides: Communication</a><a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/EVq4IbkdJHhDmLOxsNa4ve4BwmrN2Grj6Ftho72UOFs5Ew?e=yYcjHT"> with Processes]</a></td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 14th</td>
+          <td valign="top">15</td>
+          <td rowspan="3" valign="top">Interrupt handling</td>
+          <td valign="top">signal handler, LAPIC and I/O APIC <a href="https://linux-kernel-labs.github.io/refs/heads/master/lectures/interrupts.html">link</a></td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 16th</td>
+          <td valign="top">16</td>
+          <td valign="top">Detailed design of the LAPIC and APIC, interrupt domains, kernel-based data structures. IRQ handling routines.</td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 17th</td>
+          <td valign="top">17</td>
+          <td valign="top">Linked lists in the kernel, soft IRQs, threaded IRQs, work queues</td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 21st</td>
+          <td valign="top">18</td>
+          <td valign="top">Exception and signal handling</td>
+          <td valign="top">Exception handlers, Basic signal handling, kernel code</td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 23rd</td>
+          <td valign="top">19</td>
+          <td valign="top">Signal handling and concurrency</td>
+          <td valign="top">Entering and exiting signal handlers. <br>
+            Pthreads, locks, and lock-free programs (atomics)<br>
+            <a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/Eakxtsc3JVlElMwZ77IlyCEB9QFFJU0Gnr9dANqSqH9zdA">[Slides: Synchronization and scheduling]</a></td>
+        </tr>
+        <tr>
+          <td valign="top">Feb 28th</td>
+          <td valign="top">20</td>
+          <td rowspan="3" valign="top">Synchronization mechanisms</td>
+          <td valign="top">1. Basic definitions<br>
+2. Semaphores<br>
+3. Mutexes<br>
+4. Bounded queues </td>
+        </tr>
+        <tr>
+          <td valign="top">2nd March</td>
+          <td valign="top">21</td>
+          <td valign="top">5. Reader writer locks<br>
+            Sequential consistency and linearizability<br>
+            Atomic variables and volatile ints<br>
+            Barriers and phasers</td>
+        </tr>
+        <tr>
+          <td valign="top">3rd March</td>
+          <td valign="top">22</td>
+          <td valign="top">Memory consistency, spinlocks, and mutexes.<br>
+            Additional reference: pointer to the paper on ticket locks and MCS locks<br>
+[Paper] Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors<br>
+John M. Mellor-Crummey, Michael L. Scott, ACM TOCS, 1991 [<a href="https://dl.acm.org/doi/pdf/10.1145/103727.103729">link</a>]</td>
+        </tr>
+        <tr>
+          <td valign="top">10th March</td>
+          <td valign="top">23</td>
+          <td valign="top">Introduction to Scheduling</td>
+          <td valign="top"><a href="https://youtu.be/yaxcsAt8Mhw"><img src="youtube.png" width="33" height="20" alt=""/></a>Youtube <a href="https://youtu.be/75Jd3Q70Suw">video</a></td>
+        </tr>
+        <tr>
+          <td valign="top">14th March</td>
+          <td valign="top">24</td>
+          <td valign="top">Synchronization and RCU</td>
+          <td valign="top">Kernel-level semaphores, Basics of the RCU mechanism</td>
+        </tr>
+        <tr>
+          <td valign="top">16th March</td>
+          <td valign="top">25</td>
+          <td rowspan="3" valign="top">RCU details, Scheduling</td>
+          <td valign="top">RCU and overview of scheduling</td>
+        </tr>
+        <tr>
+          <td valign="top">17th March</td>
+          <td valign="top">26</td>
+          <td valign="top">Banker's algorithm. Basic scheduling code in Linux.</td>
+        </tr>
+        <tr>
+          <td valign="top">20th March</td>
+          <td valign="top">27</td>
+          <td valign="top">Scheduling code on Linux. CFS, RT, and Deadline scheduling.</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center" valign="top"><strong>Minor 2</strong></td>
+        </tr>
+        <tr>
+          <td valign="top">28th March</td>
+          <td valign="top">28</td>
+          <td valign="top">Minor 2 questions and scheduling</td>
+          <td valign="top"><p>1. Minor 2 question paper discussion<br>
+            2. Discussion on RT and deadline scheduling
+          </p></td>
+        </tr>
+        <tr>
+          <td valign="top">29th March</td>
+          <td valign="top">29</td>
+          <td rowspan="2" valign="top">Real-Time Scheduling</td>
+          <td valign="top">EDF, RMS, and DMS Scheduling</td>
+        </tr>
+        <tr>
+          <td valign="top">31st March</td>
+          <td valign="top">30</td>
+          <td valign="top">PIP, HLP, and PCP protocols</td>
+        </tr>
+        <tr>
+          <td valign="top">1st April</td>
+          <td valign="top">31</td>
+          <td rowspan="2" valign="top">Memory Systems</td>
+          <td valign="top"><p>Code for the buffer overflow attack: <a href="https://www.cse.iitd.ac.in/~srsarangi/courses/2019/col_331_2019/stack_break.c">link</a><br>
+            Code reuse attack: <a href="https://en.wikipedia.org/wiki/Return-oriented_programming">link</a><br>
+          Stuxnet worm: <a href="http://large.stanford.edu/courses/2015/ph241/holloway1/">link</a></p>
+          <p>Basic notions of the free list, stack distance, optimal, and LRU replacement algorithms.</p></td>
+        </tr>
+        <tr>
+          <td valign="top">6th April</td>
+          <td valign="top">32</td>
+          <td valign="top">Stack-based algorithms, Belady's anomaly, Thrashing, <em>PGD</em> design</td>
+        </tr>
+        <tr>
+          <td valign="top">Extra Class 1</td>
+          <td valign="top">33</td>
+          <td rowspan="2" valign="top">I/O Systems: Introduction</td>
+          <td valign="top"><p>I/O protocols, <a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/EWWSbIE8Ad9OoI6wBv-NlEwB1eVnSZA4gxjFM9wDu2wxfw">[Slides: I/O Systems]</a><br>
+            <a href="https://youtu.be/c62ukCXwxR4"><img src="youtube.png" width="33" height="20" alt=""/> Youtube Video </a>            <br>
+          </p></td>
+        </tr>
+        <tr>
+          <td valign="top">Extra Class 2</td>
+          <td valign="top">34</td>
+          <td valign="top">Storage devices<br>
+          <a href="https://youtu.be/KObjxSr4evg"><img src="youtube.png" width="33" height="20" alt=""/> Youtube video</a></td>
+        </tr>
+        <tr>
+          <td valign="top">11th April</td>
+          <td valign="top">35</td>
+          <td rowspan="2" valign="top">Memory Systems <a href="https://csciitd-my.sharepoint.com/:p:/g/personal/srsarangi_iitd_ac_in/EXKhGqhWnndLuV7YkCVEjaMBbKWxZzEhGBr6Ld6MqK9WGQ?e=UotetZ">[Slides: Memory Systems]</a><br></td>
+          <td valign="top">struct page, struct folio, TLB accesses</td>
+        </tr>
+        <tr>
+          <td valign="top">13th April</td>
+          <td valign="top">36</td>
+          <td valign="top">Lazy TLB accesses, zones, MG-LRU structures</td>
+        </tr>
+        <tr>
+          <td rowspan="2" valign="top">14th April</td>
+          <td valign="top">37</td>
+          <td rowspan="2" valign="top">Memory Systems: Page replacement, aging and eviction</td>
+          <td rowspan="2" valign="top">MG-LRU replacement, PI controller, Bloom filters, reverse mapping, <em>lru_gen_look_around</em>, Aging and eviction, thrashing</td>
+        </tr>
+        <tr>
+          <td valign="top">38</td>
+        </tr>
+        <tr>
+          <td valign="top">16th April</td>
+          <td valign="top">39</td>
+          <td valign="top">Kernel memory allocation</td>
+          <td valign="top"> <a href="https://youtu.be/XDyyhnLZUQg">   <img src="youtube.png" width="33" height="20" alt=""/> Youtube Video </a> 
+            Slab, Slub, and Buddy memory allocation</td>
+        </tr>
+        <tr>
+          <td valign="top">25th April</td>
+          <td valign="top">40</td>
+          <td rowspan="2" valign="top">Device Drivers and File Systems</td>
+          <td valign="top">Block device drivers</td>
+        </tr>
+        <tr>
+          <td valign="top">27th April</td>
+          <td valign="top">41</td>
+          <td valign="top">File Systems</td>
+        </tr>
+        <tr>
+          <td valign="top">28th April</td>
+          <td valign="top">42</td>
+          <td valign="top">Virtual machines</td>
+          <td valign="top">VMs: Para-virtualization, Type 0, Type 1, Type 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

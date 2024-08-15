@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    <title> COL 718: Architecture of High Performance Computers </title>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Architecture of High Performance Computers<br>
+      </h1>
+      <h3> <font color="blue">Course: COL718<br>
+          Semester I, 2022-23<br>
+          Credits: 4 (3-0-2)</font></h3>
+    </div>
+    <br>
+    <b><font   color="maroon"> <br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> Dr.
+          Smruti R. Sarangi </a> <br>
+        <br>
+        Lectures</font>:  <font color="#000099"><b>Slot D</b></font>: Tuesday, Wednesday,
+    Friday: 9 to 10 AM, LH 605<br>
+    <b><font   color="maroon"> Course Description:</font> </b>
+    This course will give an introduction to designing and programming
+    high performance processors.<br>
+    <br>
+    <b><font color="maroon">Evaluation</font></b><b><font 
+        color="maroon">:&nbsp;</font></b> <br>
+    <ol>
+      <li>Assignments (10% + 15% + 20%)</li>
+      <li>Minor (25%)</li>
+      <li>Major (30%)<br>
+      </li>
+    </ol>
+    <p><br>
+  <b><font color="maroon">Teaching Assistants</font></b><b><font
+          color="maroon">:&nbsp;</font></b> </p>
+    <p>
+  1. Nivedita Shrivastava<br>
+  2. Akanksha Dixit
+  <br>
+    <br>
+    <b><font color="#660000">Piazza</font></b>:&nbsp;
+    piazza.com/iit_delhi/fall2022/col718 <br>
+    <b><font   color="maroon"><br>
+    </font></b><b><font color="maroon">Textbook: <br>
+        <font color="#000000">Main Textbook: Advanced Computer
+          Architecture: </font></font></b><font color="maroon"><font
+        color="#000000">Advanced Computer Architecture (homepage of the
+          <a moz-do-not-send="true"
+          href="https://www.cse.iitd.ac.in/~srsarangi/advbook/">book</a>)</font></font><br>
+        <b>Background on processors and caches:</b> Basic Computer
+    Architecture<small><span style="color: rgb(51, 102, 255);"><span
+          style="color: rgb(153, 51, 153);"><span style="color: rgb(51,
+            102, 255);"><span style="color: rgb(153, 51, 153);"><span
+                style="color: rgb(51, 102, 255);"><span style="color:
+                  rgb(153, 51, 153);"><span style="color: rgb(51, 102,
+                    255);"><span style="color: rgb(153, 51, 153);"><span
+                        style="color: rgb(51, 102, 255);"><span
+                          style="color: rgb(153, 51, 153);"><span
+                            style="color: rgb(51, 102, 255);"><span
+                              style="color: rgb(153, 51, 153);"><span
+                                style="color: rgb(153, 51, 153);"><span
+                                  style="color: rgb(153, 51, 153);"><span
+                                    class="Apple-style-span"
+                                    style="border-collapse: separate;
+                                    font-style: normal; font-variant:
+                                    normal; font-weight: normal;
+                                    letter-spacing: normal; line-height:
+                                    normal; orphans: 2; text-indent:
+                                    0px; text-transform: none;
+                                    white-space: normal; widows: 2;
+                                    word-spacing: 0px; font-size:
+                                    medium;"><span
+                                      class="Apple-style-span"><span
+                                        class="Apple-style-span"
+                                        style="border-collapse:
+                                        separate; font-style: normal;
+                                        font-variant: normal;
+                                        font-weight: normal;
+                                        letter-spacing: normal;
+                                        line-height: normal; orphans: 2;
+                                        text-indent: 0px;
+                                        text-transform: none;
+                                        white-space: normal; widows: 2;
+                                        word-spacing: 0px; font-size:
+                                        medium;"><span
+                                          class="Apple-style-span"><big><span
+                                              style="color: black;"><small>,
+                                                (<a
+                                                  href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html"
+                                                  moz-do-not-send="true">link</a>)</small></span></big></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></small><br>
+    <br>
+    <br>
+    </p>
+    <table width="1288" height="437" cellspacing="2" cellpadding="2"
+      border="1">
+      <tbody>
+        <tr>
+          <td valign="top"><b>Date</b><b><br>
+            </b> </td>
+          <td valign="top"><b>Lecture</b><b><br>
+            </b> </td>
+          <td valign="top"><b>Slides</b><b><br>
+            </b> </td>
+          <td valign="top"><b>References</b><b><br>
+            </b> </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffffff">Week 1<br>
+            <br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">Pipelining</td>
+          <td valign="top" bgcolor="#ffffff"><a
+              href="../../../files/advbook/Chapter_2_ooo.pptx">Chapter
+              2: Out-of-order pipelines</a><br>
+          </td>
+          <td valign="top" bgcolor="#ffffff"><a moz-do-not-send="true"
+              href="https://www.cse.iitd.ac.in/~srsarangi/archbooksoft.html">Basic
+
+
+
+
+
+
+
+
+
+
+
+              Computer Architecture</a><br>
+            Chapter 9 of Basic Computer Architecture: All four parts<br>
+            Chapter 2 of Advanced Computer Architecture<br>
+            1. Summary of in-order pipelining [<a
+              href="https://youtu.be/N5T7nEY2xUg">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffffff">Week 2<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">Out-of-order pipelines<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">2. Motivation for
+            out-of-order pipelining [<a
+              href="https://youtu.be/9Vdd6OUjEPs">YouTube</a>]<br>
+            3. Register renaming and precise exceptions [<a
+              href="https://youtu.be/H0EFrtfeLwQ">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Week 3<br>
+          </td>
+          <td valign="top">Fetch logic<br>
+          </td>
+          <td valign="top"><a
+              href="../../../files/advbook/Chapter_3_fetch-decode.pptx">Chatper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              3: The fetch and decode stages</a><br>
+          </td>
+          <td valign="top">Chapter 3 of Advanced Computer Architecture<br>
+            1. Fetch logic and predicting if an instruction is a branch
+            or not. [<a href="https://youtu.be/i93Bzm3Kn50">YouTube</a>]<br>
+            2. Branch prediction [<a href="https://youtu.be/vJbQtWp5jsQ">YouTube</a>]<br>
+            3. Decode stage [<a href="https://youtu.be/wo75h1_zQgE">YouTube</a>]<br>
+            Class notes: [<a href="files/class-notes-oct14.pdf">pdf</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Week 3<br>
+          </td>
+          <td valign="top">Interaction between the <br>
+            architecture and the OS<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">Notes: [<a href="files/osnotes.pdf">pdf</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Week 4<br>
+          </td>
+          <td valign="top">Issue, Execute, and Commit<br>
+            Stages<br>
+          </td>
+          <td valign="top"><a
+              href="../../../files/advbook/Chapter_4_issue_commit.pptx">Chapter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              4: Issue, execute, commit</a><br>
+          </td>
+          <td valign="top">Chapter 4:<br>
+            1. Instruction renaming [<a
+              href="https://youtu.be/DdEI0VWMeVE">YouTube</a>]<br>
+            2. Wakeup, select, and broadcast [<a
+              href="https://youtu.be/UyUceTpZgqc" moz-do-not-send="true">YouTube</a>]<br>
+            3. Load store queue [<a href="https://youtu.be/rRkaJeaKXik"
+              moz-do-not-send="true">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffffff">Week 5<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">Alternative approaches to
+            Issue and Commit<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff"><a
+              href="../../../files/advbook/Chapter_5-alternative-approaches.pptx">Chapter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              5: Alternative approaches to issue<br>
+              and commit</a><br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">4. Instruction commit [<a
+              href="https://youtu.be/6Cgtw8PpjPo" moz-do-not-send="true">YouTube</a>]<br>
+            Chapter 5:<br>
+            1. Aggressive Speculation [<a
+              href="https://youtu.be/doBCdbOPYS8" moz-do-not-send="true">YouTube</a>]<br>
+            2. Replay schemes [<a href="https://youtu.be/0eX2glBZFzE"
+              moz-do-not-send="true">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffffff">Week 6:<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">Compiler based techniques<br>
+            and caches<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff"><a
+              href="../../../files/advbook/Chapter_7-caches.pptx"
+              moz-do-not-send="true">Chapter 7: Caches</a> </td>
+          <td valign="top" bgcolor="#ffffff">Chapter 5:<br>
+            3. Compiler based techniques [<a
+              href="https://youtu.be/G47Y3qrtR-Y" moz-do-not-send="true">YouTube</a>]<br>
+            Chapter 7: <br>
+            1. Overview of caches [<a
+              href="https://youtu.be/sag_NG3Wp1k" moz-do-not-send="true">YouTube</a>]<br>
+            2. Cache optimizations and virtual memory [<a
+              href="https://youtu.be/we6_luWjkCs" moz-do-not-send="true">YouTube</a>]<br>
+            3. SRAM and CAM arrays [<a
+              href="https://youtu.be/dAKOSj3HI-I" moz-do-not-send="true">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffffff">Week 7<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">Rest of caches<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff"><br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">4. Cacti tool, Elmore delay
+            [<a href="https://youtu.be/Y9gcr3PLXGw"
+              moz-do-not-send="true">YouTube</a>]<br>
+            5. Advanced cache optimizations [<a
+              href="https://youtu.be/nfBGV_NKleY" moz-do-not-send="true">YouTube</a>]<br>
+            6. Trace caches, instruction, and data prefetching [<a
+              href="https://youtu.be/QwxZZdlNp2Y">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ffffff">Week 8<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff">Multicore Systems<br>
+          </td>
+          <td valign="top" bgcolor="#ffffff"><a
+              href="../../../files/advbook/Chapter_9-multicore-systems.pptx"
+              moz-do-not-send="true">Chapter 9: Multicore Systems</a> </td>
+          <td valign="top" bgcolor="#ffffff">Chapter 9:<br>
+            1. Parallel programming and hardware threads [<a
+              href="https://youtu.be/rTjt7oghY64">YouTube</a>]<br>
+            2. Theoretical foundations: overview of coherence and
+            consistency [<a href="https://youtu.be/vdVzpZWF8Pk">YouTube</a>]<br>
+            A. Introduction to OpenMP (<a moz-do-not-send="true"
+href="http://www.red-ricap.org/documents/1071192/1486573/OpenMP_01_Introduction.pdf/2a2c91a8-60cf-4716-9ae4-57684a56e4b8">pdf</a>)&nbsp;
+
+
+
+
+            [self-study mode]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Week 9<br>
+          </td>
+          <td valign="top">Consistency<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">3. Sequential consistency, PLSC, and
+            coherence [<a href="https://youtu.be/-XoyoA4xUhE">YouTube</a>]
+            <br>
+            4. Execution witnesses, access graphs, causal graphs [<a
+              href="https://youtu.be/qH1FX9rnpHM">YouTube</a>]</td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#FFFFFF">Week 10 <br>
+          </td>
+          <td valign="top" bgcolor="#FFFFFF">Multicore Systems<br>
+          </td>
+          <td valign="top" bgcolor="#FFFFFF"><br>
+          </td>
+          <td valign="top" bgcolor="#FFFFFF">5. Cache coherence: snoopy
+            and directory protocols [<a
+              href="https://youtu.be/4WLSYe4JjWI">YouTube</a>]<br>
+            6. Advanced directory protocols and atomic operations [<a
+              href="https://youtu.be/jPf_jnLhMyQ">YouTube</a>]<br>
+            7. Memory models and data races [<a
+              href="https://youtu.be/wMWBUufVUiM">YouTube</a>]<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#ff0000">Week 11<br>
+          </td>
+          <td valign="top" bgcolor="#ff0000">Security<br>
+          </td>
+          <td valign="top" bgcolor="#ff0000"><a moz-do-not-send="true"
+              href="../../../files/advbook/Chapter_13_secure_processor_archs.pptx">Chapter
+
+
+              13: Security</a><br>
+          </td>
+          <td valign="top" bgcolor="#ff0000">1. Cryptographic
+            fundamentals and encryption [<a moz-do-not-send="true"
+              href="https://youtu.be/dqYwEWOLWF0">YouTube</a>]<br>
+            2. Hashing and secure processors [<a moz-do-not-send="true"
+              href="https://youtu.be/NnEbHmxM4yk">YouTube</a>]<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <b><font   color="maroon"></font></b>
+  </body>
+</html>

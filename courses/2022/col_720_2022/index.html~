@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>COL 720: Real-Time Systems</title>
+  <style type="text/css">
+  .papercolor {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #1023A7;
+}
+  </style>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Real Time Systems</h1>
+      <h3> <font color="blue">Course: COL 720<br>
+          Semester II, 2021-22<br>
+          Credits: 4 (3-0-2) <br>
+        </font></h3>
+    </div>
+    <p><br>
+      <b><font  color="maroon"> <br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> <font
+            color="#000099">Prof. Smruti R. Sarangi </font></a> <br>
+        <br>
+        Lectures</font></b>: Slot E<br>
+    <br>
+    <b><font color="#660000">Piazza link:</font></b>&nbsp;&nbsp;&nbsp;&nbsp; <a href=" piazza.com/iit_delhi/spring2022/col720 ">piazza.com/iit_delhi/spring2022/col720</a><br>
+    <b><font  color="maroon"> Course Load:&nbsp; </font></b><font
+       color="maroon"><font color="#000000">Minor (20%), Major (30%), Assignments (40%) (three assignments),&nbsp; Term paper (10%)&nbsp;</font><br>
+    </font><b><font  color="maroon"><br>
+      </font></b> <font color="#990000"><b>Office Hours</b></font>:
+    Just send me an e-mail.<br>
+    <br>
+    <font color="#993300"><b>Passing Criteria</b>:<font color="#000000">
+        Minimum 25% in both theory and assignments. Overall: 30%.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Audit pass: Minimum 25% in both theory and assignments. Overall:
+        40%</font></font><br>
+    <br>
+    <br>
+    <b><font color="maroon">Teaching Assistants</font></b><b><font
+         color="maroon">: </font></b><br>
+    <br>
+    1. Priyanka Singla</p>
+    <p><br>
+      <b><font color="maroon">Reference Books</font></b><br>
+      <font color="#3333ff">[Textbook]</font>&nbsp;  Real-Time Systems: Theory and Practice by Rajib Mall<br>
+      <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font
+      color="#ff0000"> All the slides are being used with the authors'
+    permission. The videos are based on the original slides of
+    Prof. Rajib Mall (IIT Kharagpur). They have also been created with the authors' permission. Some minor modifications have been made. The author (Prof. Mall) is not 
+    responsible for
+    any errors of omission and commission insofar as the modifications
+    and the videos are concerned.</font><br>
+      <b><font  color="maroon"><br>
+      </font></b><b><font  color="maroon">Lectures and Slides:<br>
+      </font></b><br>
+    </p>
+    <table width="837" border="1">
+      <tbody>
+        <tr>
+          <td width="110" valign="top"><b>Week</b><br>
+          </td>
+          <td width="74" valign="top"><b>Lecture</b><br>
+          </td>
+          <td width="471" valign="top"><b>Topics</b><br>
+          </td>
+          <td width="154" valign="top"><b>Link to the Video<br>
+            </b> </td>
+        </tr>
+        <tr>
+          <td valign="top">Week 1</td>
+          <td valign="top">1</td>
+          <td valign="top">Introduction</td>
+          <td valign="top"><a href="https://youtu.be/yShUSwskUNA"><img src="youtube.png" width="40" height="21" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">2</td>
+          <td valign="top">Basic terminology and the design space</td>
+          <td valign="top"><a href="https://youtu.be/Rl83k1q6IIo"><img src="youtube.png" width="39" height="22" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">3</td>
+          <td valign="top">Modeling timing constraints using FSMs</td>
+          <td valign="top"><a href="https://youtu.be/TO-aLVtuAUY"><img src="youtube.png" width="38" height="19" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">Week 2</td>
+          <td valign="top">4</td>
+          <td valign="top">Basics of scheduling</td>
+          <td valign="top"><a href="https://youtu.be/Bacqj335fxs"><img src="youtube.png" width="40" height="21" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">5</td>
+          <td valign="top">Cyclic and table-driven scheduling</td>
+          <td valign="top"><a href="https://youtu.be/fVKM2U1Vr4A"><img src="youtube.png" width="40" height="21" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">6</td>
+          <td valign="top">EDF<br>
+            <a href="https://www.cs.fsu.edu/~baker/realtime/restricted/notes/edfproof.html">Proof of the optimality of EDF </a>
+            </td>
+          <td valign="top"><a href="https://youtu.be/RbCRJ40DYqU"><img src="youtube.png" width="40" height="21" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">Week 3</td>
+          <td valign="top">7</td>
+          <td valign="top"><p>RMS <br>
+            [<span class="papercolor">Paper</span>] Scheduling Algorithms for Multiprogramming 
+          in a Hard-Real-Time Environment, Liu and Layland, Journal of the ACM, 1973</p>
+            <p>[<span class="papercolor">Paper</span>] The Rate Monotonic Scheduling Algorithm: Event Characterization and Average Case Behavior, Lehoczky, Sha, and Ding. IEEE Real Time Systems Symposium, 1989<br>          
+              <br>
+          </p></td>
+          <td valign="top"><a href="https://youtu.be/2mdz93pnKhY"><img src="youtube.png" width="40" height="21" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">8</td>
+          <td valign="top">DMS<br> 
+            [<span class="papercolor">Paper</span>] Deadline Monotonic Scheduling, Audsley, 1990</td>
+          <td rowspan="2" valign="top"><a href="https://youtu.be/ldq1-engkxI"><img src="youtube.png" width="40" height="21" alt=""/></a></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">9</td>
+          <td valign="top">RMS Extensions</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+      </tbody>
+  </table>
+  </body>
+</html>

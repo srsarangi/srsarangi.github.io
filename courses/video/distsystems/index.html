@@ -1,0 +1,3015 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title> Advanced Distributed Systems </title>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+	  
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NE1TKLNT4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6NE1TKLNT4');
+</script>
+	  
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </head>
+  <body>
+    <div align="center">
+      <h1><font color="blue">Advanced Distributed Systems </font></h1>
+      <h3>&nbsp;</h3>
+    </div>
+    <br>
+    <b><br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> <font
+            color="#000099">Prof. Smruti R. Sarangi </font></a> <br>
+    </b><br>
+    <br>
+    <b><font color="maroon">Reference Books:</font></b><br>
+    <font color="#3333ff">[Relevant Reference for Most Concepts]</font>
+    Distributed Systems: An Algorithmic Approach (Sukumar Ghosh, CRC) <br>
+    <font color="#3333ff">[For relevant background]</font> Distributed
+    Systems: Principles and Paradigms (Andrew S. Tanenbaum and Martin V.
+    Steen) <br>
+    <font color="#3333ff">[Reference on distributed algorithms] </font>Distributed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Algorithms by Nancy Lynch<br>
+    &nbsp;&nbsp;&nbsp; OR<br>
+    &nbsp;&nbsp;&nbsp; Introduction to Distributed Algorithms by Gerard
+    Tel<br>
+    <font color="#3333ff">[Reference on advanced OS concepts]</font>
+    Advanced Concepts in Operating Systems (Singhal and Shivaratri)<br>
+    <br>
+    <b><br>
+      </font></b><br>
+    <table height="2084" cellspacing="2" cellpadding="2" border="1"
+      width="798">
+      <tbody>
+        <tr>
+          <td valign="top"><b>Lecture</b><b><br>
+            </b> </td>
+          <td valign="top"><b>Title</b><b><br>
+            </b> </td>
+          <td valign="top"><b>References</b><b><br>
+            </b> </td>
+        </tr>
+        <tr align="center">
+          <td colspan="3" rowspan="1" bgcolor="#ffffff" valign="top"><font
+              color="#990000"><b>Information Storage and Retrieval
+                (Gossiping, P2P Networks, DHTs)</b></font><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" bgcolor="#ffffff" valign="top">1</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/comm.pdf">Epidemic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Based Algorithms</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/epidemic.pdf">Epidemic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Algorithms for Replicated Database Maintenance</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/comm.pdf">Gossip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Based Algorithms</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/gossip.pdf">A
+              Gossip-Style Failure Detection Service</a><br>
+            <img src="youtube.png" alt="Youtube link:" height="18"
+              width="34"> <a href="https://youtu.be/-36j_DGXEwE">YouTube
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              video (gossip and epidemic based protocols)</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1"   bgcolor="#ffffff" valign="top">2</td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/napster-gnutella.pdf">Napster and Gnutella</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/napstergnutella.pdf"
+              moz-do-not-send="true">Napster and Gnutella: A Comparison
+              of Two Popular Peer to Peer Protocols</a><br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" width="34"> <a
+              moz-do-not-send="true" href="https://youtu.be/NeWjiUmqowQ">YouTube
+
+
+
+              video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td>3 </td><td bgcolor="#ffffff" valign="top"><a href="docs/pastry.pdf">Pastry
+
+              DHT</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/pastry.pdf">Pastry:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Scalable, decentralized object location and<br>
+              routing for large-scale peer-to-peer systems</a><br>
+            <br>
+            <img src="youtube.png" alt="Youtube link:" height="18"
+              width="34">&nbsp; <a href="https://youtu.be/93Ab8-dAZu4">YouTube
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              video</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">4</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/chord.pdf">Chord
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              DHT</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/chord.pdf">Chord:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              A Scalable Peer-to-peer Lookup Service for Internet
+              Applications</a><br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34"><a
+              moz-do-not-send="true" href="https://youtu.be/Ki-Dnqk4mss">YouTube
+
+
+
+
+
+
+
+
+
+
+
+              video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">5</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/freenet.pdf">Freenet</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ernet.in/%7Esrsarangi/docs/dist/freenet.pdf"
+              moz-do-not-send="true">Freenet: A Distributed Anonymous
+              Information Storage and Retrieval System </a><br>
+            <br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34">
+            <a moz-do-not-send="true"
+              href="https://youtu.be/8g9aHeJkRDI">YouTube video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">6</td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/bittorrent.pdf">BitTorrent<br>
+            </a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="https://en.wikipedia.org/wiki/BitTorrent">1.
+              Wikipedia page</a><br>
+            <a
+              href="http://privateweb.iitd.ernet.in/%7Esrsarangi/docs/dist/dissbt.pdf">2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Dissecting BitTorrent: Five Months in a Torrent's Lifetime</a><br>
+            <a
+href="http://privateweb.iitd.ernet.in/%7Esrsarangi/docs/dist/kademlia.pdf">3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Kademlia: A Peer-to-Peer Information System Based on the
+              XOR Metric</a><br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34">
+            <a moz-do-not-send="true"
+              href="https://youtu.be/mPfsd945jt4">YouTube video</a><br>
+            <a href="https://en.wikipedia.org/wiki/BitTorrent"> </a></td>
+        </tr>
+        <tr align="center">
+          <td colspan="3" rowspan="1" bgcolor="#ffffff" valign="top"><font
+              color="#660000"><b>Distributed Algorithms</b></font><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">7</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/clocks.pdf">Logical
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Clocks, Physical Clocks, GPS</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ernet.in/%7Esrsarangi/docs/dist/lamport.pdf">1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Time, Clocks, and the Ordering of Events in a Distributed
+              System</a><br>
+            <a href="https://www.geeksforgeeks.org/berkeleys-algorithm/">Berkely
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              algorithm link</a><br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34">
+            <a moz-do-not-send="true"
+              href="https://youtu.be/AQCA9YVENrg">YouTube video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3" colspan="1" bgcolor="#ffffff" valign="top">8</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/clocks.pdf">Lamport's
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Mutual Exclusion Algorithm</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/mutex.pdf">Ricart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Agarwala Algorithm<br>
+              Maekawa's Algorithm</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/maekawa.pdf">1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              A root(N) Algorithm for Mutual Exclusion in Decentralized
+              Systems</a> (paper on Maekawa's Algorithm)<br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/mutex.pdf">Token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              based Mutual Exclusion</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><img src="youtube.png"
+              alt="Youtube link:" moz-do-not-send="true" height="18"
+              border="0" width="34"> <a moz-do-not-send="true"
+              href="https://youtu.be/90DChePW5wI">YouTube video </a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">9</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/leader.pdf">Leader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Election</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><img src="youtube.png"
+              alt="Youtube link:" moz-do-not-send="true" height="18"
+              border="0" width="34"> <a moz-do-not-send="true"
+              href="https://youtu.be/SFvxUIWF4mc">YouTube video</a> </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" bgcolor="#ffffff" valign="top">10</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/mst.pdf">Minimum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Spanning Tree (GHS Algo.)</a><br>
+          </td>
+          <td rowspan="2" colspan="1" bgcolor="#ffffff" valign="top">Refer
+
+
+            to the book by Gerard Tel.<br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34">
+            <a moz-do-not-send="true"
+              href="https://youtu.be/7UW2NYFRj-I">YouTube video</a><br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">Chandy Lamport Algorithm<br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">11</td>
+          <td bgcolor="#ffffff" valign="top"><a moz-do-not-send="true"
+              href="docs/flp.pdf">The FLP Result</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/fischer.pdf">1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Impossibility of Distributed Consensus with One Faulty
+              Process</a><br>
+            2. Simple explanation of the proof: <a
+href="https://www.the-paper-trail.org/post/2008-08-13-a-brief-tour-of-flp-impossibility/">link</a><br>
+            <img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34">
+            <a moz-do-not-send="true"
+              href="https://youtu.be/i5yNfmN15r0">YouTube video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">12</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/cap-theorem.pptx">The CAP Theorem</a></td> <td><p><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/captheorem.pdf">Brewer's
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Conjecture and the Feasibility of Consistent, Available,
+              Partition-Tolerant Web Services</a><br>
+[Self study] </p>
+            <p><img src="youtube.png" alt="Youtube link:"
+              moz-do-not-send="true" height="18" border="0" width="34"> <a href="https://youtu.be/CMeRDixx3u4">YouTube video</a></p></td>
+        </tr>
+        <tr> <td> 13 </td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/paxos.pdf">Paxos</a>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/paxos.pdf">1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              The Part-Time Parliament</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/simplepaxos.pdf">2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Paxos Made Simple</a><br>
+            <img src="youtube.png" alt="Youtube link:" height="18"
+              width="34">&nbsp; <a
+href="https://www.youtube.com/watch?v=qZTsVoq8kvo&amp;list=PL1iLu2CSC9EWlusZsVqXQ9BFg5jRRLzom">Youtube
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">14</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/raft.pptx">Raft
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              consensus protocol</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/raft.pdf">In
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Search of an Understandable Consensus Algorithm</a><br>
+            <a href="https://youtu.be/oBlbpPDxs-M"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                width="34"> Youtube video</a> <br>
+          </td>
+        </tr>
+        <tr> <td> 15 </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/byzantine.pptx">Byzantine General's Problem</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/byzantine.pdf">The
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Byzantine Generals Problem</a><br>
+            <a href="https://youtu.be/X8zAKQF5Rqo"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                width="34"> Youtube video</a></td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">16</td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/commit_and_virtual_synchrony.pptx">Virtual
+              Synchrony, 2-Phase and 3-Phase Commits</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="https://dl.acm.org/doi/pdf/10.1145/582318.582339">Nonblocking
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Commit Protocols (1981 SIGMOD)</a><br>
+            <a href="https://youtu.be/LbqczsRwAgQ"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                width="34"> Youtube video</a> <br>
+          </td>
+        </tr>
+        <tr> <td> 17 </td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/bitcoin.pptx">Bitcoin
+ and Blockchains</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/princeton_bitcoin_book.pdf">1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Bitcoin and Cryptocurrency Technologies, 2016</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/2002_bitcoin_hashcash.pdf">2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Hashcash - A Denial of Service Counter-Measure</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/2008_bitcoin.pdf">3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Bitcoin: A Peer-to-Peer Electronic Cash System</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/2016_hyperledger.pdf">4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Architecture of the Hyperledger Blockchain Fabric </a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/2017_comparison_ethereum_hyperledger_fabric.pdf">5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Comparison of Ethereum, Hyperledger Fabric, and Corda</a><br>
+            <a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/2017_bitcoin_academic_pedigree.pdf">6.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Bitcoin's Academic Pedigree</a><br>
+            <a href="https://youtu.be/X1_PnojpXcY"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"> Youtube video</a> <br>
+          </td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/stellar.pptx">Stellar Consensus Protocol</a></td>
+          <td bgcolor="#ffffff" valign="top"><div>
+            <p><a href="https://arxiv.org/pdf/1911.05145.pdf"><span data-usefontface="false" data-contrast="none" xml:lang="EN-US" lang="EN-US">Garc&iacute;a-P&eacute;rez, &Aacute;lvaro, and Maria A. Schett. "Deconstructing stellar consensus (extended version)." arXiv preprint arXiv:1911.05145 (2019).</span>&#8203;              </a></p>
+            <div>
+              <p xml:lang="EN-US" paraid="0" paraeid="{8eaa998d-c177-4a92-b204-aebea0a8fa7d}{181}" data-ccp-props="{'335551550':1,'335551620':1,'335559683':0,'335559685':360,'335559731':-360,'335559737':0,'335562764':2,'335562765':0.9,'335562766':4,'335562767':10,'335562768':4,'335562769':0}" lang="EN-US"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.696.93&amp=&rep=rep1&amp=&type=pdf"> <span data-usefontface="false" data-contrast="none" xml:lang="EN-US" lang="EN-US">Mazieres, David. "The stellar consensus protocol: A federated model for internet-level consensus." Stellar Development Foundation 32 (2015): 1-45.</span>&#8203;</a></p>
+            </div>
+          </div>            <a href="https://youtu.be/X1_PnojpXcY"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"></a> <a href="https://youtu.be/bY0v6v-8rJk">YouTube video</a></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/ethereum.pptx">Ethereum</a></td>
+          <td bgcolor="#ffffff" valign="top"><p><a href="https://files.gitter.im/ethereum/yellowpaper/VIyt/Paper.pdf">Wood,  Gavin. &quot;Ethereum: A secure decentralised generalised  transaction ledger.&quot; Ethereum project yellow paper  151.2014 (2014)</a></p>
+            <div><a href="https://cryptorating.eu/whitepapers/Ethereum/beigepaper.pdf">Dameron, Micah. &quot;Beigepaper: an ethereum  technical specification.&quot; Ethereum Project Beige Paper (2018). Dameron, M.  (2018). Beigepaper: an ethereum  technical report</a></div>
+<p><a href="https://youtu.be/X1_PnojpXcY"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"></a> <a href="https://www.youtube.com/watch?v=OBTj1kJiz40">YouTube video</a></p></td>
+        </tr>
+        <tr align="center">
+          <td colspan="3" rowspan="1" bgcolor="#ffffff" valign="top"><font
+              color="#660000"><b>Large-scale Distributed Systems</b></font></td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">20</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/coda.pdf">Coda</a></td>
+          <td bgcolor="#ffffff" valign="top">&nbsp;<a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/coda.pdf">1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Coda: A Highly Available File System for a<br>
+              Distributed Workstation Environment</a><br>
+            <a
+              href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Fallacies of Distributed Systems</a><br>
+            <a href="https://youtu.be/X1_PnojpXcY"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"></a><a
+              href="https://youtu.be/3NWnxTnnrSY">Youtube video</a><br>
+          </td>
+        </tr>
+        <tr> <td> 21 </td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/dynamo.pdf">Amazon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Dynamo</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/dynamo.pdf">Dynamo:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Amazon’s Highly Available Key-value Store</a><br>
+            <a href="https://youtu.be/X1_PnojpXcY"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"></a> <a
+              href="https://youtu.be/kNCq_neHFXA">Youtube video</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">22</td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/percolator.pdf">Google Percolator</a><br>
+          </td>
+          <td bgcolor="#ffffff" valign="top"><a
+href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/percolator.pdf">Large
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Scale Incremental Processing Using Distributed
+              Transactions and Notifications</a><br>
+            <a href="https://youtu.be/sgoDfDUkRW4"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34">Youtube video<br>
+            </a></td>
+        </tr>
+        <tr> <td> 23 </td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/corona.pdf">Corona</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/corona.pdf">A
+              High Performance Publish-Subscribe System for<br>
+              the World Wide Web</a><br>
+            <a href="https://youtu.be/fYWu8kwesXw"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"> Youtube video</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notes used
+            along with the video (<a href="docs/corona-notes.pdf">link</a>)<br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">24</td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/cassandra.pdf">Facebook: Cassandra</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/cassandra.pdf">Cassandra:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              A Decentralized Structured Storage System<br>
+            </a><a href="https://youtu.be/H99FLO-JouM"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34">&nbsp; Youtube video<br>
+            </a></td>
+        </tr>
+        <tr> <td> 25 </td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/photostorage.pdf">Facebook: Photo Storage</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/facebook.pdf">Finding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              a Needle in a Haystack: Facebook's Photo Storage</a><br>
+            <a href="https://youtu.be/k3RBmZiFF9M"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34">&nbsp; Youtube video<br>
+            </a></td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" bgcolor="#ffffff" valign="top">26</td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="docs/voldemort.pdf">Voldemort (LinkedIn)<br>
+            </a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/voldemort.pdf">Project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Voldemort -- Distributed Key-Value Storage</a><br>
+            <a href="https://youtu.be/8ZwFXR_7ezA"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34">&nbsp; Youtube video<br>
+            </a></td>
+        </tr>
+        <tr> <td> 27 </td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/condor.pdf">Condor</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/condor.pdf">Distributed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Computing in Practice:<br>
+              The Condor Experience</a><br>
+            <a href="https://youtu.be/hoiMqr9hXZ4"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"> Youtube video</a></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" valign="top">28</td>
+          <td bgcolor="#ffffff" valign="top"><a href="docs/dryad.pdf">DryadLINQ</a></td>
+          <td bgcolor="#ffffff" valign="top"><a
+              href="http://privateweb.iitd.ac.in/%7Esrsarangi/docs/dist/dryad.pdf">DryadLINQ:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              A System for General-Purpose Distributed <br>
+              Data-Parallel Computing Using a High-Level Language</a><br>
+            <a href="https://youtu.be/ZxmAIK7KBPA"><img
+                src="youtube.png" alt="Youtube link:" height="18"
+                border="0" width="34"> <span class="video-url-fadeable
+                style-scope ytcp-video-metadata-info">Youtube video</span></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </body>
+</html>

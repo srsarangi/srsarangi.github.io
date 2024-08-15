@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title> ELL 305: Computer Architecture</title>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1773664-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Computer Architecture<br>
+      </h1>
+      <h3> <font color="blue">Course: ELL 305<br>
+          Semester I, 2019-20 <br>
+          Credits: 4 (3-0-2) <br>
+        </font></h3>
+    </div>
+    <br>
+    <b><font <br="" color="maroon"> <br>
+        Instructor:<a href="http://www.cse.iitd.ac.in/%7Esrsarangi"> <font
+            color="#000099">Prof. Smruti R. Sarangi </font></a> <br>
+        <br>
+        Lectures</font></b>: Tuesday, Wednesday and Friday: 10 AM to 11
+    AM, LHC 114<br>
+    <div dir="auto"><b><font color="#990000">Piazza:</font> </b><a
+        href="http://piazza.com/iit_delhi/summer2019/ell305">http://piazza.com/iit_delhi/summer2019/ell305</a>
+      (Access code is ell305)<br>
+    </div>
+    <br>
+    <b><font <br="" color="maroon"> Course Load: </font></b>Minor 1,
+    Minor 2, End term, 3 programming assignments<br>
+    <font color="#990000"><b>Office Hours</b></font>: Friday 3 to 5 PM,
+    (SIT 215)<br>
+    <br>
+    <b><font <br="" color="maroon">Evaluation:</font></b> 17.5% (Minor
+    1), 17.5% (Minor 2), 25% (Major), Assignments (12.5% + 12.5% + 15%)<br>
+    <font color="#993300"><b>Passing Criteria</b>:</font> At least 30%
+    overall<br>
+    <br>
+    <b><font color="#660000">Policy for late assignments and re-minor: </font></b><br>
+    1. We will hold one re-minor for people who have missed one minor at
+    the end of the major exam. Note that<br>
+    to ensure a level playing field, it will be significantly harder
+    than the original minor exams. The student needs<br>
+    to show documentary evidence such as a medical certificate to the TA
+    on the day of the reminor. Please don't<br>
+    send any mails to the instructor or the TAs regarding this.<br>
+    <br>
+    2. Every homework will have a deadline. Students can submit after
+    the deadline: 20% penalty per day (rounded to <br>
+    the next day --&gt; 3 hours late implies 1 day late). <br>
+    <br>
+    <br>
+    <b><font color="maroon">Teaching Assistants</font></b><b><font
+        <br="" color="maroon">: </font></b><br>
+    <br>
+    <table border="0" cellpadding="0" cellspacing="0" width="772">
+      <tbody>
+        <tr style="height:17.0pt" height="23">
+          <td rowspan="1" class="xl77" style="border-bottom:2.0pt double
+            black; height:98.0pt;border-top:none" height="130">1.
+            Hameedah Sultan (Head TA)<br>
+            2. Priyanka Singla<br>
+            3. Nivedita Shrivastava<br>
+            4. Churchill Hemraj Khangar<br>
+            5. Adeeb N. A.<br>
+            6. Padala Suneel<br>
+            7. Amit Kumar<br>
+            8. Vaibhav Singh Khokhar<br>
+            9. Saurabh Gupta<br>
+            10. Shubham Sharma<br>
+            11. Nirmal Sharma<br>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <b><font color="maroon">Reference Books</font></b><br>
+    <font color="#3333ff">[Textbook]</font>&nbsp; Computer Organisation
+    and Architecture, Smruti R. Sarangi, McGrawHill 2015<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="http://www.cse.iitd.ac.in/%7Esrsarangi/archbooksoft.html">Link</a>
+    to the homepage of the book [contains all the slides, and video
+    lectures].<br>
+    <br>
+    <b><font <br="" color="maroon"><br>
+      </font></b><b><font <br="" color="maroon">Lectures and Slides:<br>
+      </font></b><br>
+    <table border="1" width="1136">
+      <tbody>
+        <tr>
+          <td valign="top"><b>Date</b><br>
+          </td>
+          <td valign="top"><b>Lecture</b><br>
+          </td>
+          <td valign="top"><b>References</b><b>/Remarks<br>
+            </b> </td>
+        </tr>
+        <tr>
+          <td valign="top">23rd July <br>
+          </td>
+          <td valign="top">Course Policies<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">24th July<br>
+          </td>
+          <td valign="top">Introduction: Design of a CPU (from a Turing
+            machine)<br>
+          </td>
+          <td valign="top">Chapter 1<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">26th July<br>
+          </td>
+          <td valign="top">Number systems: sign-magnitude, 1's
+            complement, bias (pros and cons)<br>
+          </td>
+          <td valign="top">Chapter 2<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">30th July<br>
+          </td>
+          <td valign="top">2's complement number system<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">31st July<br>
+          </td>
+          <td valign="top">Representation of floating-point numbers<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">2nd Aug<br>
+          </td>
+          <td valign="top">Denormal, double precision, and
+            representation of strings<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">6th Aug<br>
+          </td>
+          <td valign="top">Assembly language: format, register transfer
+            notation, basic instructions, load and store<br>
+          </td>
+          <td valign="top">Chapter 3<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">7th Aug<br>
+          </td>
+          <td valign="top">Branch instructions. SimpleRisc code for a
+            factorial function.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">9th Aug<br>
+          </td>
+          <td valign="top">Call and return instructions, recursive code
+            for the factorial function<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">13th Aug<br>
+          </td>
+          <td valign="top">Encoding instructions<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">16th Aug<br>
+          </td>
+          <td valign="top">SRAM, DRAM, and CAM Cells<br>
+          </td>
+          <td valign="top">Chapter 6<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">20th Aug<br>
+          </td>
+          <td valign="top">Adders: carry select and carry lookahead<br>
+          </td>
+          <td valign="top">Chapter 7<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">21st Aug<br>
+          </td>
+          <td valign="top">Iterative and Booth Multipliers<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td colspan="3" rowspan="1" valign="top"><b>Minor 1</b><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">30 Aug<br>
+          </td>
+          <td valign="top">Minor 1 solutions, Wallace tree multiplier,
+            Restoring division algorithm<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">31 Aug<br>
+          </td>
+          <td valign="top">Non-restoring division [<font color="#006600">with
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              the proof</font>], and floating-point addition<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">3 Sept<br>
+          </td>
+          <td valign="top">Floating-point addition/subtraction, and
+            rounding<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">4 Sept<br>
+          </td>
+          <td valign="top">Floating-point multiplication and division<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">6 Sept<br>
+          </td>
+          <td valign="top">SimpleRisc Processor: IF to MA stages<br>
+          </td>
+          <td valign="top">Chapter 8<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">7 Sept<br>
+          </td>
+          <td valign="top">RW stage, control unit, data path, control
+            path, introduction to pipelining<br>
+          </td>
+          <td valign="top">Chapter 9<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">11 Sept<br>
+          </td>
+          <td valign="top">Explanation of the 5 stages of the pipeline.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">13 Sept<br>
+          </td>
+          <td valign="top">Delayed branches, code reordering, and
+            interlocks (branch and data)<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">17 Sept<br>
+          </td>
+          <td valign="top">Forwarding<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">18 Sept<br>
+          </td>
+          <td valign="top">Performance equations<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">20 Sept<br>
+          </td>
+          <td valign="top">Performance equations - II<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">24 Sept<br>
+          </td>
+          <td valign="top">Interrupt and exception handling<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><br>
+          </td>
+          <td align="center" valign="top"><b>Minor 2</b><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">1 Oct<br>
+          </td>
+          <td valign="top">Minor 2 solutions.Design of the memory
+            system.<br>
+          </td>
+          <td valign="top">Chapter 10<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">9th Oct<br>
+          </td>
+          <td valign="top">Spatial locality, temporal locality, Fully
+            associative caches<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">11th Oct<br>
+          </td>
+          <td valign="top">Fully associative, set associative, and
+            direct-mapped caches<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">15th Oct<br>
+          </td>
+          <td valign="top">Performance model of memory systems<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">16th Oct<br>
+          </td>
+          <td valign="top">Types of misses, memory system optimization
+            techniques<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">18th Oct<br>
+          </td>
+          <td valign="top">Virtual memory and paging<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">22 Oct<br>
+          </td>
+          <td valign="top">TLB, swap space, shared memory, and
+            protection<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">23rd Oct<br>
+            [+extra classes]<br>
+          </td>
+          <td valign="top">Parallel programming, Amdahl's law, Flynn's
+            taxonomy, sequential consistency, coherence<br>
+            weak consistency<br>
+          </td>
+          <td valign="top">Chapter 11<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">25th Oct<br>
+          </td>
+          <td valign="top">Snoopy coherence: Write-update and
+            Write-invalidate protocols.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">29th Oct<br>
+          </td>
+          <td valign="top">Multithreading, Vector instructions<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">30th Oct<br>
+          </td>
+          <td valign="top">GPUs<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">1st Nov<br>
+          </td>
+          <td valign="top">Interconnects<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">13th Nov<br>
+          </td>
+          <td valign="top">Course wrap-up, Chapter 12 [self-study
+            component]<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
