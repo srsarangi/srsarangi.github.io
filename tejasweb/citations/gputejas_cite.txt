@@ -1,0 +1,6 @@
+@inproceedings{malhotra2014gputejas,
+  title={GPUTejas: A Parallel Simulator for GPU Architectures},
+  author={Malhotra, Geetika and Goel, Seep and Sarangi, Smruti R.},
+  booktitle={IEEE International Conference on High Performance Computing},
+  year={2014}
+}

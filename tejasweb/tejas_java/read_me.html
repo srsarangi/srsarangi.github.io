@@ -1,0 +1,30 @@
+<h1 id="tejas-java-jikervm-">Tejas-Java (JikeRVM)</h1>
+<p>Tejas Java is an architectural simulator to analyze java programs. It uses JikesRVM to get the instruction trace, and supports class compiled using, upto Java-6.</p>
+<p><strong>Note:</strong> This is a plugin for Tejas, which is require for the functionality.
+This plugin gets the trace of a Java program. However, to analyze the trace to Tejas is reuiqred, which can de downloded from <a href="http://www.cse.iitd.ac.in/tejas/">Tejas</a></p>
+<hr>
+<p> A complete README file on how to use Tejas-Java can be found here:  <a href="docs/tejas-java.pdf">Tejas-Java Documentation</a></p>
+<h2 id="how-to-setup-tejas-java">HOW TO setup Tejas-Java</h2>
+<h3 id="pre-requisite">Pre-Requisite</h3>
+<ul>
+<li>Ant</li>
+<li>Mercurial</li>
+<li>gcc</li>
+<li>gcc-multilib</li>
+<li>g++-multilib</li>
+<li>Bison</li>
+<li>Perl</li>
+<li>Awk</li>
+</ul>
+<h3 id="folder-structure">Folder Structure</h3>
+<p>The folder is a clone of JikesRVM with added instrumented code to get the trace of the Java program. There are two folders inside this:</p>
+<ul>
+<li><strong>rvm_singlethread</strong></li>
+<li><strong>rvm_multithread</strong></li>
+</ul>
+<p>As the name indicates, these folder to be used when using benchmarks of single and multiple thread respectively. In practise, any of the folders can be used to run any benchmark. However, rvm_multithread has special code, which marks instruction from different threads separately, so that each of the threads can be analyzed independently.</p>
+<p>As per the need, rename the folder to <strong>rvm</strong>, which is the name of the expected folder while building jikes.</p>
+<p>For single thread benchmark:<br><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">mv rvm_singlethread rvm</code><br>  and for multiple thread  use:<br><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">mv rvm_multithread rvm</code></p>
+<h3 id="build-commands">Build Commands</h3>
+<p>After renaming, configure the the java version.<br>build has been tested on openjdk-6 and openjdk-7<br>Configure approriate java version using command:<br><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">vim bin/buildit.base_config</code><br>and setting approriate Java version:</p>
+<pre class="editor-colors lang-"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>global.javahome.ppc32-linux=/opt/ibm-java2-ppc-50</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>global.javahome.ppc64-linux=/opt/ibm-java2-ppc-50</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>global.javahome.ia32-linux=/opt/jdk1.6.0&nbsp;&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>global.javahome.x86_64-linux=/usr/lib/jvm/java-6-openjdk&nbsp;&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>global.javahome.ia32-osx=/System/Library/Frameworks/JavaVM.framework/Home&nbsp;&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>global.javahome.x86_64-osx=/System/Library/Frameworks/JavaVM.framework/Home&nbsp;&nbsp;</span></span></div></pre><p>After this run:<br><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">bin/buildit localhost development</code><br>This will create folder inside dist, which will contain the required binary files.<br>Please refer to <a href="docs/tejas-java.pdf">Tejas-Java Documentation</a> for more details.</p>

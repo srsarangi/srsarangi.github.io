@@ -1,0 +1,34 @@
+
+/** PAGE */
+
+#page {
+	padding-bottom: 70px;
+}
+
+/** LINK STYLE 1 */
+
+.link-style1 {
+	float: left;
+}
+
+.link-style1 a {
+}
+
+.link-style1 span {
+}
+
+.image-style1a span {
+	background: url(images/pics02.gif) no-repeat left top;
+}
+
+.image-style2a span {
+	background: url(images/pics08.gif) no-repeat left top;
+}
+
+ul.style1 li {
+	line-height: 6px;
+}
+
+ul.style1 h3 {
+	padding-bottom: 5px;
+}
