@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2011-06-07"/>
+<link rel="stylesheet" href="http://www.nongnu.org/elyxer/lyx.css" type="text/css" media="screen"/>
+<title>Architectural Support For Handling Jitter In Parallel Real Time Applications </title>
+</head>
+<body>
+<div id="globalWrapper">
+
+<h1 class="title">
+<i><span class="giant"><span class="blue">Architectural Support For Handling Jitter In<br/>
+ Parallel Real Time Applications </span></span></i>
+</h1>
+<h2 class="author">
+<i><span class="small"><span class="red"><a class="URL" href="http://www.cse.iitd.ac.in/~srsarangi/">Smruti Ranjan Sarangi</a></span></span></i><span class="default"><br/>
+<i></i></span><span class="scriptsize"><span class="red"><a class="URL" href="mailto:srsarangi@cse.iitd.ac.in">srsarangi@cse.iitd.ac.in</a></span></span>
+</h2>
+<div class="Unindented">
+
+<div class="left">
+Hello all, welcome to our project home-page on Jitter-Management. We are primarily intereseted in characterizing, identifying and mitigating jitter in parallel real-time applications for large general purpose multi-core platforms. Currently, our team has following team members. 
+</div>
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section*-1"></a>Team Members
+</h1>
+<ol>
+
+<li>
+Smruti Ranjan Sarangi (Faculty)
+</li>
+<li>
+Sandeep Chandran (MTech Student)
+</li>
+<li>
+Prathmesh Kallurkar (MTech Student)
+</li>
+</ol>
+<div class="Unindented">
+
+<div class="left">
+Any body intereseted to know the details of our work can contact at <i><span class="scriptsize"><span class="red"><a class="URL" href="mailto:srsarangi@cse.iitd.ac.in">srsarangi@cse.iitd.ac.in</a>.</span></span></i>
+</div>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<div class="fulltoc">
+
+<div class="tocheader">
+Table of Contents
+</div><div class="tocindent">
+
+<div class="toc">
+<a class="Link" href="#toc-Section*-1">Section: Team Members</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section*-2">Section: Issues With Parallel Real-Time Applications On General Purpose Processors</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section*-3">Section: Our Idea</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section*-4">Section: Current Status And Planned Experiments</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section*-5">Section: Future Work</a>
+</div></div>
+
+</div>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<div class="Indented">
+
+<span class="VSpace">
+
+</span>
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section*-2"></a><a class="Label" name="Overview On Jitter"> </a>Issues With Parallel Real-Time Applications On General Purpose Processors
+</h1>
+<div class="Unindented">
+
+<div class="left">
+Parallel soft real time applications like network packet processing, multimedia applications and stream processing have been traditionally run on custom ASIC’s and FPGA’s. Owing to Moore’s Law, today’s general purpose multicore processors also enjoy some of their advantages like high throughput and low power consumption. Consequently, there is a growing trend of porting applications hitherto run on customized hardware to general purpose multicore platforms.<br/>
+
+</div>
+</div>
+<div class="Indented">
+
+<div class="left">
+Some of the prior works have established that even with the additional computational power, it is hard to guarantee soft real-time guarantees for real-time applications. Major sources of interferrence identified are :
+</div>
+</div>
+<ul>
+
+<li>
+
+<div class="left">
+OS activities like kernel threads, daemons, handling timer-interrupts
+</div>
+</li>
+<li>
+
+<div class="left">
+Simulataneous Threads competing for shared resources like memory bus, cache lines, etc.
+</div>
+</li>
+<li>
+
+<div class="left">
+Temperature Management Schemes like Dynamic Voltage Frequency Scaling (DVFS) and Processor Throttling
+</div>
+</li>
+<li>
+Overheads in providing virtual machine abstractions
+</li>
+</ul>
+<div class="Unindented">
+All of these mechanisms introduce non-determinism into program execution, which is collectively called <b><i><span class="red">Jitter</span></i></b>. Prior work on jitter suggests that even small values of jitter ensure that we will not be able to perform parallel real time computations with a deadline of the order of tens of milli-seconds. 
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section*-3"></a>Our Idea
+</h1>
+<div class="Unindented">
+Our work is primarily focused on characterizing various sources of jitter, evaluating their impact on performance, and mitigating jitter by augmenting existing hardware and software. Modern parallel applications make use of lot of thread synchronization primitives, signal, etc. Such synchronization calls typically make use of interrupts/system calls. Our initial studies on synchronization primitives suggest that they are the biggest contributors of jitter for modern parallel applications. We plan to modify the kernel of a commodity OS like Linux to log the begin and end of such calls. Since, we are considering parallel real-time applications, we also expect higher contention for shared resources like bus, cache, etc which would result in higher jitter experienced by the application. Using a full-system simulator, we plan to collect the cache page-replacement decisions to estimate the jitter experienced by time-sensitive threads.<br/>
+
+</div>
+<div class="Indented">
+
+<div class="left">
+To mitigate the jitter, we are considering the use of a novel passive, non-intrusive hardware unit (See <a class="Reference" href="#figure 1">↓</a>) which monitors the jitter-events experienced by the user thread and uses this events to give a timing estimate of the jitter induced delay. <br/>
+
+</div>
+</div>
+<div class="Indented">
+
+<div class="center">
+<a class="Label" name="figure 1"> </a>
+<div class="float">
+
+<div class="figure">
+
+<div class="center">
+<img class="embedded" src="jitter_unit.png" alt="figure jitter_unit.png" style="width: 458px; max-width: 764px; height: 205px; max-height: 342px; "/>
+
+</div>
+<div class="caption">
+Figure 1 Jitter Unit
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="Indented">
+
+<div class="left">
+Once armed with such measurements of jitter, we identified measures to compensate this jitter by using techniques like voltage-frequency scaling. 
+</div>
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section*-4"></a>Current Status And Planned Experiments
+</h1>
+<div class="Unindented">
+The idea needs to be validated with detailed simulations. We plan to collect memory footprints of a standard commodity OS like Linux alongwith some standard parallel benchmark programs. These memory traces would then be used to instrument a cache model and therby establish the interference caused by OS and competing processes/threads on parallel applications. The measurements of interest to us would be 
+</div>
+<ul>
+
+<li>
+Time delay caused due to jitter : We plan to divide the program into smaller fragments and compare the performance of fragments of benchmarks to the ideal scenario. This should give a fine-grained timing analysis.
+</li>
+<li>
+Intereference caused due to contention to shared resource : Multiple simultaneous threads will compete for shared resources like memory-bus and cache. We wish to collect the page-eviction details alongwith the usual access penalties to estimate the jitter caused by L2 evictions.
+</li>
+<li>
+Power overhead : Scaling up the frequency of a processor to compensate the jitter would increase power consumption of the cpu. We plan to use standard heuristics to use the frequency reponse to estimate the power overhead of the methodology.
+</li>
+</ul>
+<div class="Unindented">
+Currently, we have constructed the prototype of the cache model we would use. Heuristics for converting jitter events to delay would requiring profiling on standard parallel banchmarks like Splash2.
+</div>
+<h1 class="Section-">
+<a class="toc" name="toc-Section*-5"></a>Future Work
+</h1>
+<div class="Unindented">
+In the study till now, we have considered the frequency statistics of the jitter events. However, in the future, we would like to use a clock-accurate full-system simulator to know the schedule-patterns and timing analysis of the jitter events and the kernel executions to predict the jitter in advance. We would also like to work on a distributed mechanism using which cores can communicate the local jitter values so that performance of the cores working on different user-threads can be synchronized to save power without affecting the overall performance of the application.
+</div>
+
+<hr/>
+<p>Copyright (C) 2011 Smruti Ranjan Sarangi</p>
+</div>
+</body>
+</html>

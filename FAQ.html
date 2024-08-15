@@ -1,0 +1,293 @@
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>FAQ</title>
+  </head>
+  <body>
+    <div class=""><big><big><big><b><br class="">
+            </b>
+          </big></big></big></div>
+    <big><big><big><b>
+          </b></big></big></big>
+    <div class=""><big><big><big><b>FAQ</b></big></big></big><br>
+      <br>
+      <big><font color="#990000"><b>1) Why do we need to use game
+            theory? Why not use a heuristic?</b></font></big><br>
+      <br>
+      <small><b><big><big><font color="#006600">Ans:</font></big></big></b></small><br>
+      There are several reasons: <br>
+      <br>
+      1. Scheduling is in general a very complex problem, and the global
+      optimum is hard to find computationally. Such problems are often
+      NP-hard. <br>
+      Furthermore, we are constrained by the amount of time we can spend
+      in making a decision. <br>
+      <br>
+      2. We thus want an algorithm that makes fast and local
+      (thread-wise) decisions yet guarantees a <b><font color="#336666">good
+          global</font></b> outcome.<br>
+      <br>
+      3. Simple heuristics aim to do this. Most heuristics proposed in
+      the literature do not incorporate the notion of a "local search",
+      whereas game theory does.<br>
+      <br>
+      4. Game theory using Nash equilibria (N.E.) is a more formal and
+      controlled approach for doing this. The idea here is that we
+      converge at a constrained local maxima where<br>
+      no player (thread) gains anything by changing its strategy
+      unilaterally. At least in that neighborhood, this is a good
+      solution. We will have many such N.E. points.<br>
+      Choose the one that maximizes the mean utility. <br>
+      <br>
+      5. Often in scheduling problems a N.E. point can either be proven
+      to be globally optimal, or can be experimentally demonstrated to
+      be sufficiently close. <br>
+      In our case, where it is not possible to do either of these, we
+      can only show that our results are better than those obtained by
+      using competing algorithms.<br>
+      <br>
+      <big><font color="#990000"><b>2) Why make threads bid and "play"?</b></font></big><br>
+      <br>
+      <small><b><big><big><font color="#006600">Ans:</font></big></big></b></small><br>
+      The key question while using a virtual wallet is how much to spend
+      on the current allocation (bid), and what to keep for the next
+      bid. <br>
+      This should be dependent on the other threads who are bidding. For
+      example, if thread A is not allowing thread B to win, we should<br>
+      deduct the opportunity cost (somehow related to B's expected
+      utility) from thread A's wallet. This will ensure fairness, as
+      well as performance. <br>
+      Making them bid in an auction is a very natural and simple way of
+      ensuring this. <br>
+      <br>
+      <br>
+      <br>
+      <b><big><font color="#990000">3) Why is the utility ((1 - u)(W -
+            F) + B)? Shouldn’t it be (1 - u)W - F + B? Also, this is
+            assuming the thread wins the auction, right?<br>
+            <br>
+          </font></big></b><small><b><big><big><font color="#006600">Ans:<br>
+                <br>
+              </font></big></big></b></small>Reason 1: When we have few
+      bidders, we get small values of u. However, when we have more
+      bidders, we get large values of u. Now, the amount that is added
+      to the wallet is<br>
+      (1-u)(W-F) + B, which is the utility. <br>
+      <br>
+      If we instead use the term: (1-u)W - F<br>
+      This becomes too sensitive to u, values can become negative (need
+      to be rounded to 0), and the numbers can go out of our control.
+      This led to "fairness" problems<br>
+      in our experiments. Hence, the choice was made to multiply the
+      auctioneer's fee, F, with (1-u). Furthermore, it was hard to
+      maintain parity between multiple cores<br>
+      that have different numbers of bidders. <br>
+    </div>
+    <big><font color="#990000">
+      </font></big>
+    <div class=""><br>
+      Reason 2: If use the utility function: (1-u)W - F + B, my bid will
+      become (bid = uW). This is not factoring in the effects of the
+      core and cache migration costs. <br>
+      This is experimentally sub-optimal. <br class="">
+    </div>
+    <div class=""><br class="">
+    </div>
+    <div class=""><font color="#990000"><b>4) I don’t fully understand
+          why "the aim is to compute u1..uk such that the system reaches
+          a Nash equilibrium.” Why is that? What's intrinsically <br>
+          good about a Nash equilibrium? Shouldn't the goal be to
+          converge to an optimal operating point (i.e., one that
+          maximizes a fitness function)? I see <br>
+          Nash equilibria as "local maxima" in the space, because any
+          small deviation in any one dimension produces a worsening of
+          the fitness function. But <br>
+          I think you may find many Nash equilibria along the
+          way&nbsp;which are much worse than the global maximum--think
+          of the Prisoner's Dilemma, for <br>
+          example, whose “global optimum” in fact is not even a Nash
+          equilibrium, whereas the Nash equilibrium for that problem is
+          clearly globally suboptimal.</b></font></div>
+    <font color="#cc6600"><b>
+      </b></font>
+    <div class=""><br>
+      <small><b><big><big><font color="#006600">Ans:</font></big></big></b></small><br>
+      <u>Intrinsically good about a Nash equilibrium:</u> It is a
+      locally optimal solution. (of course depends on the type of the N.
+      E.: normal, or stable, or strong).<br>
+      <br>
+      <u>Can we have a bad N.E.? </u><br>
+      Hill climbing with many random restarts gives us an N.E. which
+      hopefully has a reasonably good mean utility. This is verified
+      experimentally. <br class="">
+    </div>
+    <div class=""><b><br class="">
+      </b>
+    </div>
+    <b>
+    </b>
+    <div class=""><b><font color="#990000">5) I don’t understand this
+          paragraph:</font></b></div>
+    <b><font color="#990000">
+      </font></b>
+    <div class=""><b><font color="#990000"><br class="">
+        </font></b>
+    </div>
+    <b><font color="#990000">
+      </font></b>
+    <div class=""><b><font color="#990000">"There is thus a need to have
+          a profiling stage, where we record samples of the wallet
+          balance and the bonus across phases and core types. For the <br>
+          MEVBench workloads we found&nbsp;at least 1000 samples to be
+          sufficient to yield stable distributions. In general, we can
+          use results from sampling<br>
+          theory [] to compute the minimum number of samples that we
+          need to collect. Once we have calculated these distributions,
+          we can then store them<br>
+          &nbsp;for each core type and phase.”</font></b></div>
+    <b><font color="#990000">
+      </font></b>
+    <div class=""><b><font color="#990000"><br class="">
+        </font></b>
+    </div>
+    <b><font color="#990000">
+      </font></b>
+    <div class=""><b><font color="#990000">How is this sampling done?
+          Why would “sampling theory” help here?<br>
+          <br>
+        </font></b><b><font color="#990000"><small><b><big><big><font
+                    color="#006600">Ans:<br>
+                    <br>
+                  </font></big></big></b></small></font></b></div>
+    <div class="">The Pattern Table (PT) is being built in advance. At
+      this point of time, we do not know anything about the wallet
+      balances of different threads. All that we know for each<br>
+      row of the PT is the following: <br>
+      <br>
+      a. The number of bidders.<br>
+      b. The phase of each bidder.<br>
+      c. The type of the core that all of them are bidding for.<br>
+      d. Whether one of the bidders (thread that was just running on
+      that core) is migrating or not. <br>
+      <br>
+      Based on this information, each thread needs to estimate the
+      utilities (payoffs) of the other threads, and compute its best
+      strategy (value of u). The assumption is that<br>
+      the rest of the bidders are also rational players, and everybody
+      would like to win, and there is no collusion. <br>
+      <br>
+      We use the notion of stochastic game theory where we operate with
+      uncertain information. Each player represents the payoff matrix of
+      other players using Bayesian<br>
+      probabilities. The assumption is that these are known apriori.
+      Then, we try to compute a Nash equilibrium in this probabilistic
+      setting, which is also known as a <br>
+      Harsanyi-Nash equilibrium. This has been proven to be
+      theoretically equivalent to a regular N.E. with crisp values and
+      incomplete information. This is what we compute<br>
+      using Hill climbing. <br>
+      <br>
+      Now, to do this, we need the distribution of the utility of each
+      thread. Specifically, the distribution of the wallet balance and
+      the bonus. This can only be gotten with <br>
+      profiling, which means that we run an application, simulate an
+      auction with default values of u, collect samples of the wallet
+      balance and bonus, tabulate them, and<br>
+      compute a distribution.<br>
+      <br>
+      The question is: To compute a distribution, how many samples do we
+      require? Is it 5, 10, 100, 1000, or a million. Experimentally, we
+      found our results to start converging<br>
+      after 1000 samples. However, to eliminate concerns of overfitting,
+      we can always use results from sampling theory to calculate the
+      number of samples.<br>
+      <br>
+      <br>
+    </div>
+    <div class=""><br class="">
+    </div>
+    <div class=""><font color="#990000"><b>6) I don’t fully understand
+          how U and F maximization work together. In one paragraph, the
+          text seems to suggest that each iteration of the algorithm<br>
+          &nbsp;picks a random j and searches the vicinity of uj trying
+          to find the one that maximizes Uj, then it calculates the new
+          F. The paragraph afterwards,<br>
+          &nbsp;however, suggests that the algorithm moves toward
+          maximizing F. Which is it?</b></font></div>
+    <div class=""><br class="">
+    </div>
+    <div class=""><b><font color="#990000"><small><b><big><big><font
+                    color="#006600">Ans:<br>
+                  </font></big></big></b></small></font></b>The fitness
+      indicates the suitability of a point as the N.E. <br>
+      <br>
+      A point (u_1 .... u_k) is at the N.E. when by perturbing any
+      single u_j, we do not maximize the mean utility. <br>
+      <br>
+      To find out how far a point is from the N.E., we do the following:<br>
+      <br>
+      <ol>
+        <li>For a given j, perturb it and compute the mean utility. If
+          we are at the N.E. all the values will be less than the mean
+          utility with u_j. <br>
+          However, if we are not at the N.E., let us choose that value
+          that gives us the maximum utility. Let us store the
+          difference, D_j, between the <br>
+          new utility and utility with u_j. <br>
+        </li>
+        <li>Let us do this for all j, and sum up D_j.</li>
+        <li>The reciprocal of this is the value of the fitness function,
+          which essentially tells us its suitability as the N.E.</li>
+      </ol>
+      <p>We move in a direction that will take us towards an N.E., till
+        we find one. <br>
+      </p>
+      <br class="">
+    </div>
+    <div class=""><b><font color="#990000">7) If the search is done
+          using F, how do you compare across restarts (assuming each of
+          them somehow reaches a Nash equilibrium)? <br>
+          All Nash equilibria are just as “good."<br>
+        </font></b><br>
+      <b><font color="#990000"><small><b><big><big><font color="#006600">Ans:<br>
+                  </font></big></big></b></small></font></b>We missed a
+      line that said that we choose that N.E. which maximizes the mean
+      utility.<br>
+      <br>
+      <b><font color="#990000">8) Why are you using IPC/energy as the
+          bonus and not IPC?<br>
+        </font></b><br>
+      <b><font color="#990000"><small><b><big><big><font color="#006600">Ans:<br>
+                  </font></big></big></b></small></font></b>Our wallet
+      balance basically increases (variable component) by incorporating
+      the winner's bonus. Since we want to improve performance, it
+      should be IPC.<br>
+      However, this is not core-agnostic. We thus take another metric
+      that is positively correlated with the IPC and is core-agnostic.
+      This is IPC/energy in the case of the<br>
+      MEVBench benchmarks (correlation: roughly 0.8). <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </body>
+</html>
