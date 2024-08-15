@@ -51,4 +51,4 @@ Documentation
 ---------------
 
 For detailed information and EmuARM documentation, please refer to 
-http://www.cse.iitd.ac.in/~srsarangi/files/software/emuarm/emuarm-manual.pdf
+emuARM manual.
