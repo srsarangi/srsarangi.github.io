@@ -1,7 +1,0 @@
-@inproceedings{sarangi2015tejas,
-  title={Tejas: A Java based Versatile Micro-architectural Simulator},
-  author={Sarangi, Smruti R. and Kalayappan, Rajshekar and Kallurkar, Prathmesh and Goel, Seep and Peter, Eldhose},
-  booktitle={International Workshop on Power And Timing Modeling, Optimization and Simulation},
-  year={2015}
-}
-

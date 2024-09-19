@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.07pt}
-\select@language {english}
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Mechanism}{7}{0}{2}
-\beamer@sectionintoc {3}{Prevention and Recovery}{18}{0}{3}
-\beamer@subsectionintoc {3}{1}{Device Level Solutions}{19}{0}{3}
-\beamer@subsectionintoc {3}{2}{Circuit Level Techniques}{28}{0}{3}
-\beamer@subsectionintoc {3}{3}{Architecture Level Techniques}{34}{0}{3}

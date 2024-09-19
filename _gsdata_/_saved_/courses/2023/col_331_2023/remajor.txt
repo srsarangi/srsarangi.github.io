@@ -1,8 +1,0 @@
-1.	Why did the LDT become obsolete? What do you think are the reasons?
-2.	What is the need for using privileged registers in the context switch process? How does Intel manage to avoid it (to a large extent)?
-3.	Why does Linux have only a single TASK_RUNNING state that does not differentiate between ready and “already running” processes?
-4.	Why is the thread_info structure stored at the bottom of the stack?
-5.	Why cannot the kernel thread just use the user-level stack? The reason is related to performance.
-6.	What is the exact mechanism using which interrupt controllers support real-time process execution on the OS? They need to somehow interrupt
-hard real-time processes infrequently. 
-7.	What is the philosophy behind having two sets of pending signals in signal-related structures such as blocked and real-blocked? Explain in detail with examples.

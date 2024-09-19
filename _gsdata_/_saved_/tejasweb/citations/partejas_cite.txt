@@ -1,6 +1,0 @@
-@inproceedings{malhotra2014partejas,
-  title={ParTejas: A Parallel Simulator for Multicore Processors},
-  author={Malhotra, Geetika and Aggarwal, Pooja and Sagar, Abhishek and Sarangi, Smruti R.},
-  booktitle={IEEE International Symposium on Performance Analysis of Systems and Software},
-  year={2014}
-}
