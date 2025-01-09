@@ -117,22 +117,20 @@
     <table width="1136" border="1">
       <tbody>
         <tr>
-          <td width="121" valign="top"><b>Date</b><br>
-          </td>
-          <td width="70" valign="top"><b>Lecture</b><br>
+          <td width="70" valign="top"><b>Chapter</b><br>
           </td>
           <td width="316" valign="top"><b>Topics</b><br>
           </td>
           <td width="601" valign="top"><b>Details</b> </td>
         </tr>
         <tr>
-          <td valign="top">January 6th</td>
           <td valign="top">1</td>
           <td valign="top">Introduction to the course</td>
-          <td valign="top">What is an OS? </td>
+          <td valign="top">What is an OS?<br>
+            Overview of the Linux kernel's codebase<br>
+            Overview of the book <a href="https://youtu.be/Wdnwr_CDqrc"><img src="youtube.png" width="25" height="20" alt=""/></a></td>
         </tr>
         <tr>
-          <td valign="top">January 10th</td>
           <td valign="top">2</td>
           <td rowspan="3" valign="top">Overview of the computer architecture needed for an OS course</td>
           <td valign="top">1. Context switches <br>
@@ -142,24 +140,20 @@
 5. Interrupts and system calls </td>
         </tr>
         <tr>
-          <td valign="top">January 11th</td>
           <td valign="top">3</td>
           <td valign="top">1. x86 assembly<br> 2. Linking and loading</td>
         </tr>
         <tr>
-          <td valign="top">January 13th</td>
           <td valign="top">4</td>
           <td valign="top">1. Static and dynamic linking<br>
           Links: <a href="https://www.baeldung.com/cs/static-dynamic-linking-differences">link1</a>, <a href="https://domiyanyue.medium.com/c-development-tutorial-4-static-and-dynamic-libraries-7b537656163e">link2</a>,<a href="https://www3.physnet.uni-hamburg.de/physnet/Tru64-Unix/HTML/APS31DTE/DOCU_002.HTM"> link3 [very detailed]</a> </td>
         </tr>
         <tr>
-          <td valign="top">January 17th</td>
           <td valign="top">5</td>
           <td valign="top">Virtual memory and segmentation</td>
           <td valign="top">&nbsp;</td>
         </tr>
         <tr>
-          <td valign="top">January 18th</td>
           <td valign="top">6</td>
           <td valign="top">Virtual memory, I/O, DMA<br>
           Process management</td>
@@ -167,34 +161,28 @@
           Introduction to processes</td>
         </tr>
         <tr>
-          <td valign="top">January 20th</td>
           <td valign="top">7</td>
           <td rowspan="4" valign="top">Processes</td>
           <td valign="top">task_struct structure, thread_info, process state</td>
         </tr>
         <tr>
-          <td valign="top">January 24th</td>
           <td valign="top">8</td>
           <td valign="top">The <em>current</em> macro (stack address and segmentation based), process priorities, <em>mm_struct</em>, Maple tree, Anonymous and non-anonymous VM areas.</td>
         </tr>
         <tr>
-          <td valign="top">January 25th</td>
           <td valign="top">9</td>
           <td valign="top">pids, namespaces, pid structure, radix trees, and bitmaps <a href="https://youtu.be/yaxcsAt8Mhw"><img src="youtube.png" width="33" height="24" alt=""/></a></td>
         </tr>
         <tr>
-          <td valign="top">January 31st</td>
           <td valign="top">10</td>
           <td valign="top">Radix and Van Emde Boas trees, I/O and ptrace fields; fork, clone, and execve</td>
         </tr>
         <tr>
-          <td valign="top">February 1st</td>
           <td valign="top">11</td>
           <td valign="top">Processes: Task Switching</td>
           <td valign="top">The <em>copy process </em>function, capturing the hardware context, types of context switches, returning back to the user program,</td>
         </tr>
         <tr>
-          <td valign="top">February 3rd</td>
           <td valign="top">12</td>
           <td valign="top">Context Switches and Library Calls</td>
           <td valign="top"><p>Context switches, switching to user and kernel processes.<br>
@@ -202,41 +190,34 @@
             </em>The <em>write</em> system call's flow: syscall to ksys_write</p></td>
         </tr>
         <tr>
-          <td valign="top">February 4th</td>
           <td valign="top">13</td>
           <td valign="top">Synchronization: Concepts, locks, and semaphores</td>
           <td valign="top">Locks and semaphores.</td>
         </tr>
         <tr>
-          <td valign="top">February 10th</td>
           <td valign="top">14</td>
           <td valign="top">Minor-I paper discussion</td>
           <td valign="top">Discussion of the Minor-I paper, Signal handling (with an example)</td>
         </tr>
         <tr>
-          <td valign="top">February 14th</td>
           <td valign="top">15</td>
           <td rowspan="3" valign="top">Interrupt handling and signals</td>
           <td valign="top">IRQs, LAPIC, I/O APIC, IRQ domains, the <em>irq_desc</em> data structure <a href="https://linux-kernel-labs.github.io/refs/heads/master/lectures/interrupts.html">link</a></td>
         </tr>
         <tr>
-          <td valign="top">February 15th</td>
           <td valign="top">16</td>
           <td valign="top">Interrupt handling flow, Soft IRQs, Threaded IRQs</td>
         </tr>
         <tr>
-          <td valign="top">February 17th</td>
           <td valign="top">17</td>
           <td valign="top">Work queues, linked lists, and signal handlers</td>
         </tr>
         <tr>
-          <td valign="top">February 21st</td>
           <td valign="top">18</td>
           <td valign="top">Signal handling and concurrency</td>
           <td valign="top">Kernel code for signal handlers and signal context switches, atomic primitives, pthreads</td>
         </tr>
         <tr>
-          <td valign="top">February 22nd</td>
           <td valign="top">19</td>
           <td valign="top">Lock-free and wait-free programming</td>
           <td valign="top"><p>1. Basic definitions<br>
@@ -246,7 +227,6 @@
           </p></td>
         </tr>
         <tr>
-          <td valign="top">February 28th</td>
           <td valign="top">20</td>
           <td valign="top">Atomics, non-blocking programs, and memory models</td>
           <td valign="top">5. Reader writer locks<br>
@@ -256,7 +236,6 @@
             Reference on memory models: <a href="http://www.advcomparch.com">Advanced Computer Architecture</a></td>
         </tr>
         <tr>
-          <td valign="top">1st March</td>
           <td valign="top">21</td>
           <td valign="top">Spin locks and Mutexes</td>
           <td valign="top">Additional reference: pointer to the paper on ticket locks and MCS locks<br>
@@ -264,35 +243,29 @@
             John M. Mellor-Crummey, Michael L. Scott, ACM TOCS, 1991 [<a href="https://dl.acm.org/doi/pdf/10.1145/103727.103729">link</a>]</td>
         </tr>
         <tr>
-          <td valign="top">3rd March</td>
           <td valign="top">22</td>
           <td valign="top">Lockdep and RCUs</td>
           <td valign="top">The <em>lockdep </em>mechanism and RCUs <br>
             All the references are embedded in the slides.</td>
         </tr>
         <tr>
-          <td valign="top">10th March</td>
           <td valign="top">23</td>
           <td rowspan="4" valign="top">Introduction to Scheduling</td>
           <td valign="top"><a href="https://youtu.be/yaxcsAt8Mhw"><img src="youtube.png" width="33" height="20" alt=""/></a>Youtube <a href="https://youtu.be/75Jd3Q70Suw">video</a></td>
         </tr>
         <tr>
-          <td valign="top">14th March</td>
           <td valign="top">24</td>
           <td valign="top">RCU mechanisms and scheduling (introduction and priority-based)</td>
         </tr>
         <tr>
-          <td valign="top">15th March</td>
           <td valign="top">25</td>
           <td valign="top">Banker's algorithm, introduction to the Linux scheduler code</td>
         </tr>
         <tr>
-          <td valign="top">17th March</td>
           <td valign="top">26</td>
           <td valign="top">sched_entity, rq, and the CFS scheduler</td>
         </tr>
         <tr>
-          <td valign="top">21st March </td>
           <td valign="top">27</td>
           <td rowspan="2" valign="top">Real Time Systems</td>
           <td valign="top"><p><strong>EDF</strong><br>
@@ -304,21 +277,18 @@
 [Paper] Deadline Monotonic Scheduling, Audsley, 1990          </td>
         </tr>
         <tr>
-          <td valign="top">22nd March</td>
           <td valign="top">28</td>
           <td valign="top">EDF (utilization bound &lt;= 1), PIP, HLP, and PCP protocols</td>
         </tr>
         <tr>
-          <td colspan="4" align="center" valign="top"><strong>Minor 2</strong></td>
+          <td colspan="3" align="center" valign="top"><strong>Minor 2</strong></td>
         </tr>
         <tr>
-          <td valign="top">25th March</td>
           <td valign="top">29</td>
           <td valign="top">Introduction to Memory Systems</td>
           <td valign="top">&nbsp;</td>
         </tr>
         <tr>
-          <td valign="top">28th March</td>
           <td valign="top">30</td>
           <td valign="top">Minor 2 discussion</td>
           <td valign="top"><p>1. Discussion of the Minor 2 question paper<br>
@@ -327,7 +297,6 @@
           4. The notion of stack distance</p></td>
         </tr>
         <tr>
-          <td valign="top">31st March</td>
           <td valign="top">31</td>
           <td rowspan="3" valign="top">Memory Systems</td>
           <td valign="top">1. LRU and clock-based page replacement<br>
@@ -335,7 +304,6 @@
             3. Thrashing</td>
         </tr>
         <tr>
-          <td valign="top">1st April</td>
           <td valign="top">32</td>
           <td valign="top"><p>Code for the buffer overflow attack: <a href="https://www.cse.iitd.ac.in/~srsarangi/courses/2019/col_331_2019/stack_break.c">link</a><br>
             Code reuse attack: <a href="https://en.wikipedia.org/wiki/Return-oriented_programming">link</a><br>
@@ -343,12 +311,10 @@
           <p>Linux page directory and page access</p></td>
         </tr>
         <tr>
-          <td valign="top">5th April</td>
           <td valign="top">33</td>
           <td valign="top">Pages and folios, zones, mem_section structures, TLB ASIC/PCID</td>
         </tr>
         <tr>
-          <td valign="top">Extra Class 1</td>
           <td valign="top">34</td>
           <td rowspan="2" valign="top">I/O Systems: Introduction</td>
           <td valign="top"><p>I/O Protocols</p>
@@ -356,45 +322,37 @@
           <img src="youtube.png" width="33" height="20" alt=""/> Youtube Video          </a></p></td>
         </tr>
         <tr>
-          <td valign="top">Extra Class 2</td>
           <td valign="top">35</td>
           <td valign="top"><p>Storage devices<br><a href="https://youtu.be/KObjxSr4evg">
           <img src="youtube.png" width="33" height="20" alt=""/> Youtube video</a></p></td>
         </tr>
         <tr>
-          <td valign="top">11th April</td>
           <td valign="top">36</td>
           <td rowspan="4" valign="top">Memory Systems</td>
           <td valign="top">Partitions of physical memory, basic page replacement.</td>
         </tr>
         <tr>
-          <td valign="top">12th April</td>
           <td valign="top">37</td>
           <td valign="top">MG-LRU page replacement algorithm, Bloom filters, PI controller for page replacement</td>
         </tr>
         <tr>
-          <td valign="top">14th April</td>
           <td valign="top">38</td>
           <td valign="top">Reverse mapping, lru_gen_look_around, thrashing</td>
         </tr>
         <tr>
-          <td valign="top">16th April</td>
           <td valign="top">39</td>
           <td valign="top"><a href="https://youtu.be/XDyyhnLZUQg">   <img src="youtube.png" width="33" height="20" alt=""/> Youtube Video </a> Slab, Slub, and Buddy allocation</td>
         </tr>
         <tr>
-          <td valign="top">25th April</td>
           <td valign="top">40</td>
           <td rowspan="2" valign="top">I/O and File Systems</td>
           <td valign="top">Block device drivers</td>
         </tr>
         <tr>
-          <td valign="top">26th April</td>
           <td valign="top">41</td>
           <td valign="top">File systems</td>
         </tr>
         <tr>
-          <td valign="top">28th April</td>
           <td valign="top">42</td>
           <td valign="top">Virtual Machines</td>
           <td valign="top">VMs: Para-virtualization, Type 0, Type 1, Type 2</td>
