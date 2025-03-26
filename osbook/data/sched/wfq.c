@@ -32,7 +32,7 @@ int enq (int val) {
     /* There are no other enqueuers */
     atomic_store (&queue[cur_tail],val);
     atomic_store (&tail, new_tail);
-    printf ("Enqueueed %d at %d \n",val, cur_tail);
+    printf ("Enqueued %d at %d \n",val, cur_tail);
 }
 
 int deq () {
@@ -47,7 +47,7 @@ int deq () {
     /* There are no other dequeuers */
     int val = atomic_load (&queue[cur_head]);
     atomic_store (&head, new_head);
-    printf ("Dequeueed %d at %d \n",val, cur_head);
+    printf ("Dequeued %d at %d \n",val, cur_head);
 }
 
 void* enqfunc (void *arg) {

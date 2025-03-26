@@ -26,18 +26,16 @@ void nap(){
 }
 
 int enq (int val) {
-    int status;
-
     WAIT(empty);
     WAIT(qlock);
 
     queue[tail] = val;
     tail = INC(tail);
-    printf ("Enqueued %d\n", val);
 
     POST(qlock);
     POST(full);
 
+    printf ("Enqueued %d\n", val);
     return 0;
 }
 
@@ -48,12 +46,12 @@ int deq () {
     WAIT(qlock);
 
     val = queue[head];
-    head =INC(head);
-    printf ("Dequeued %d\n", val);
+    head = INC(head);
 
     POST(qlock);
     POST(empty);
 
+    printf ("Dequeued %d\n", val);
     return val;
 }
 

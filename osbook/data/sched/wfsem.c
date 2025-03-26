@@ -35,28 +35,30 @@ int enq (int val) {
             queue[tail] = val;
             tail = INC(tail);
             status = 0;
-            printf ("Enqueued %d\n", val);
         }
         UNLOCK(qlock);
     } while (status == -1); 
 
+    printf ("Enqueued %d\n", val);
     return status;
 }
 
 int deq () {
     int val;
+    int status;
 
     do {
         LOCK (qlock);
-        if (tail == head) val = -1;
+        if (tail == head) status = -1;
         else {
+            status = 0;
             val = queue[head];
             head = INC(head);
-            printf ("Dequeued %d\n", val);
         }
         UNLOCK (qlock);
-    } while (val == -1);
+    } while (status == -1);
 
+    printf ("Dequeued %d\n", val);
     return val;
 }
 

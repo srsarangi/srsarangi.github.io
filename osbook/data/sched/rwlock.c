@@ -52,15 +52,15 @@ int enq (int val) {
     int status;
 
     WAIT(empty);
-
     get_write_lock();
+   
     queue[tail] = val;
     tail = INC(tail);
-    printf ("Enqueued %d\n", val);
-    release_write_lock();
 
+    release_write_lock();
     POST(full);
 
+    printf ("Enqueued %d\n", val);
     return 0;
 }
 
@@ -68,14 +68,15 @@ int deq () {
     int val;
 
     WAIT(full);
-
     get_write_lock();
-    val = queue[head];
-    head =INC(head);
-    printf ("Dequeued %d\n", val);
-    release_write_lock();
 
+    val = queue[head];
+    head = INC(head);
+
+    release_write_lock();
     POST(empty);
+
+    printf ("Dequeued %d\n", val);
     return val;
 }
 
@@ -83,9 +84,9 @@ int peak() {
     /* This is the read function */
     get_read_lock();
     int val = (head == tail)? -1 : queue[head];
-    printf ("Queue head = %d\n",val);
     release_read_lock();
 
+    printf ("Queue head = %d\n",val);
     return val;
 }
 

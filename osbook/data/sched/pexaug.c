@@ -11,7 +11,6 @@ void* func(void *arg) {
     /* send a custom return value */
     int *retval = (int *) malloc (sizeof(int));
     *retval =  (*ptr) * 2; /* return 2 * thread_id */
-    return retval;
 }
 
 int main(void) {
